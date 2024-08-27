@@ -29,5 +29,8 @@
     "lucideIconPackType": "native",
     "debugMode": false
   },
-  "MAIN DASHBOARD.md": "LiHome"
+  "MAIN DASHBOARD.md": "LiHome",
+  "Game/Design/Design Dashboard.md": "LiHome",
+  "Game/Art/Art Dashboard.md": "LiHome",
+  "Game/Program/Program Dashboard.md": "LiHome"
 }

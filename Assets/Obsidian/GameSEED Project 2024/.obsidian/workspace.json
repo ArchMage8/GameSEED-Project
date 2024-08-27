@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "194bb86ce3bec6f4",
+            "id": "c57c13601a8346f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "MAIN DASHBOARD.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "MAIN DASHBOARD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "MAIN DASHBOARD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Art/To Do List Art.md"
+                "file": "MAIN DASHBOARD.md"
               }
             }
           }
@@ -159,14 +159,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "194bb86ce3bec6f4",
+  "active": "c57c13601a8346f0",
   "lastOpenFiles": [
-    "Game/Design/To Do List Design.md",
-    "Game/Program/To Do List Program.md",
-    "MAIN DASHBOARD.md",
     "General notes/NOTES.md",
-    "General notes/Markdown Cheatsheet.md",
+    "MAIN DASHBOARD.md",
+    "Game/Program/Program Dashboard.md",
+    "Game/Program/To Do List Program.md",
     "Game/Art/To Do List Art.md",
+    "Game/Art/Art Dashboard.md",
+    "Game/Design/Design Dashboard.md",
+    "Game/Design/Design notes.md",
+    "Game/Design/To Do List Design.md",
+    "General notes/Markdown Cheatsheet.md",
     "Unrelated Pics/Nazrin nyn.gif",
     "Unrelated Pics",
     "Game",
