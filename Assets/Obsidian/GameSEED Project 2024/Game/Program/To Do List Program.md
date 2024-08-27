@@ -1,6 +1,7 @@
-**Target week:**
-1. weapon switch
-2. player move
-3. recieve dmg
+**Target week 1st week:**
+- [ ] weapon switch
+- [ ] Player movement
+- [ ] Receive dmg
+- [ ] 
 
 Idle animation for each weapon?

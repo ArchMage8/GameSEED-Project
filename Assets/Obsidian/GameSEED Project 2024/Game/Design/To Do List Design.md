@@ -1,0 +1,6 @@
+- [ ] Level Design (Night/Day)
+- [ ] Make Detailed enemies/boss mechanics
+- [ ] Weapon mechanics
+- [ ] Puzzle Mechanics
+- [ ] UI Design
+- [ ] Player mechanics

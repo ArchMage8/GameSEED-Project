@@ -20,7 +20,7 @@
 4. Planting seeds(Not Decided)
 
 **Enemies:  
-1. (undecided)
+1. Boss
 2. Range and Melee
 
 how does weapon spawn?
