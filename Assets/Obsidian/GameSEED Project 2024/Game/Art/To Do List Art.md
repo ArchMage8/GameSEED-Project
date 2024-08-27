@@ -1,0 +1,3 @@
+- Player concept
+- Get references for environment
+- Enemy concepts
