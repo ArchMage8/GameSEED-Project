@@ -1,4 +1,4 @@
-#### Controls (Not set)
+#### Controls (Not set yet)
 - AD or ←→ to move
 - Space/C/K to Jump
 - V or J to Attack
@@ -12,9 +12,9 @@
 - Players can attack while on foot and while in the air.
 - Attacking on foot will stop any movement action/momentum.
 #### Health
-![[Pasted image 20240827145236.png]]
-![[Pasted image 20240827145300.png]]
-![[Pasted image 20240827145321.png]]
+![[Health Bar 1.png]]
+![[Health Bar 2.png]]
+![[Health Bar 3.png]]
 - Health Comes in the form of hearts.
 - Player will lose health when coming into contact with the enemy or projectile.
 - Players can only refill health by resting and picking up health drops from defeated enemies.

@@ -3,4 +3,4 @@
 - [ ] Weapon mechanics
 - [ ] Puzzle Mechanics
 - [ ] UI Design
-- [ ] Player mechanics
+- [x] Player mechanics

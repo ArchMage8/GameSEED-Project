@@ -1,5 +1,5 @@
 **Target week 1st week:**
-- [ ] weapon switch
+- [ ] Weapon switch
 - [ ] Player movement
 - [ ] Receive dmg
 - [ ] 
