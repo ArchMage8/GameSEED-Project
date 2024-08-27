@@ -147,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,8 +159,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8d4da9e3ac5a5412",
+  "active": "c57c13601a8346f0",
   "lastOpenFiles": [
+    "Game/Design/Player Mechanics.md",
+    "Game/Program/To Do List Program.md.meta",
+    "Game/Program/Program Dashboard.md.meta",
+    "Game/Design/Design Dashboard.md.meta",
+    "Game/Art.meta",
+    "General notes/Markdown Cheatsheet.md.meta",
+    "Game/Program.meta",
+    "General notes.meta",
+    "Game/Art/What artstyle should the player character be in.md.meta",
+    "Unrelated Pics/Nazrin nyn.gif.meta",
+    "Game.meta",
     "Game/Art/Pics/Animation Styles/Hazel570.gif",
     "Game/Art/Pics/Animation Styles/HBlade.gif",
     "Game/Art/Art Dashboard.md",
@@ -179,18 +190,8 @@
     "Game/Design/Design Dashboard.md",
     "Game/Design/Design notes.md",
     "Game/Design/To Do List Design.md",
-    "Game/Art/Pics/Animation Styles",
-    "Game/Art/Pics",
     "Game/Art/c3c3ee8a7c31f0cd0350bc3c3426e936.png",
-    "Game/Art/erina.apng",
-    "erina 1.apng",
-    "erina.apng",
     "Unrelated Pics/Nazrin nyn.gif",
-    "Unrelated Pics",
-    "Game",
-    "Game/Art",
-    "Game/Program",
-    "Game/Design",
     "Welcome.md"
   ]
 }
