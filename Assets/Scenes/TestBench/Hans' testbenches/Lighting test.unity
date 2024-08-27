@@ -377,7 +377,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0
@@ -3304,7 +3304,7 @@ GameObject:
   - component: {fileID: 2040623984}
   - component: {fileID: 2040623983}
   m_Layer: 0
-  m_Name: DaySky1
+  m_Name: DaySky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

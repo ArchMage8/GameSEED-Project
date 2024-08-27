@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,11 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md"
+                "file": "Game/Art/Art Dashboard.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "75386b1c4225bae3",
@@ -161,37 +162,39 @@
   },
   "active": "c57c13601a8346f0",
   "lastOpenFiles": [
+    "Game/Design/To Do List Design.md",
     "Game/Design/Player Mechanics.md",
+    "Game/Design/Enemies Mechanics.md",
+    "Game/Design/Design notes.md",
+    "Game/Design/Design Dashboard.md",
+    "Game/Art/What artstyle should the player character be in.md",
+    "Game/Art/To Do List Art.md",
+    "Game/Program/To Do List Program.md",
+    "Game/Program/Program Dashboard.md",
+    "Game/Design/Reference Images/Health Bar 3.png",
+    "Game/Design/Reference Images/Health Bar 2.png",
+    "Game/Design/Reference Images/Health Bar 1.png",
+    "Game/Art/Art Dashboard.md",
+    "Game/Art/Pics/Animation Styles/Erina.gif",
+    "Game/Art/Pics/Animation Styles/Erina320.gif",
+    "Game/Design/Player Mechanics.md.meta",
+    "Game/Design/Reference Images/Health Bar 2.png.meta",
+    "Game/Design/Enemies Mechanics.md.meta",
+    "Game/Design/Reference Images.meta",
+    "Game/Design/Reference Images/Health Bar 3.png.meta",
+    "Game/Design/Reference Images/Health Bar 1.png.meta",
+    "Game/Design/Reference Images",
     "Game/Program/To Do List Program.md.meta",
     "Game/Program/Program Dashboard.md.meta",
     "Game/Design/Design Dashboard.md.meta",
-    "Game/Art.meta",
-    "General notes/Markdown Cheatsheet.md.meta",
-    "Game/Program.meta",
-    "General notes.meta",
-    "Game/Art/What artstyle should the player character be in.md.meta",
-    "Unrelated Pics/Nazrin nyn.gif.meta",
-    "Game.meta",
     "Game/Art/Pics/Animation Styles/Hazel570.gif",
     "Game/Art/Pics/Animation Styles/HBlade.gif",
-    "Game/Art/Art Dashboard.md",
     "Game/Art/Pics/Animation Styles/Hazel.gif",
-    "Game/Art/What artstyle should the player character be in.md",
     "Game/Art/Pics/Animation Styles/HBlade 1.gif",
-    "Game/Art/Pics/Animation Styles/Erina320.gif",
-    "Game/Art/Pics/Animation Styles/Erina.gif",
     "Game/Art/Pics/Animation Styles/Erina960.gif",
     "General notes/Markdown Cheatsheet.md",
     "General notes/NOTES.md",
     "MAIN DASHBOARD.md",
-    "Game/Art/To Do List Art.md",
-    "Game/Program/Program Dashboard.md",
-    "Game/Program/To Do List Program.md",
-    "Game/Design/Design Dashboard.md",
-    "Game/Design/Design notes.md",
-    "Game/Design/To Do List Design.md",
-    "Game/Art/c3c3ee8a7c31f0cd0350bc3c3426e936.png",
-    "Unrelated Pics/Nazrin nyn.gif",
     "Welcome.md"
   ]
 }
