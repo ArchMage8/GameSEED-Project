@@ -6,6 +6,7 @@
 - [ ] Enemy spritesheet
 - [ ] Environment basic tilemap (what the player actually stands on)
 - [ ] Environment overlay that'll be infront of the tilemap, to make the map not look blocky
+- [ ] GUI Wireframe
 - [ ] GUI
 - [ ] Main menu
 

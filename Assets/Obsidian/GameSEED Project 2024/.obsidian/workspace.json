@@ -129,7 +129,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "75386b1c4225bae3",
@@ -147,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -161,39 +162,41 @@
   },
   "active": "c57c13601a8346f0",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Game/Art/To Do List Art.md",
+    "Untitled.md.meta",
     "Game/Art/What artstyle should the player character be in.md",
+    "Game/Art/To Do List Art.md",
     "Game/Art/Art Dashboard.md",
-    "Game/Art/Pics/Animation Styles/HBlade.gif",
-    "Game/Art/Pics/Animation Styles/Hazel570.gif",
-    "Game/Art/Pics/Animation Styles/Hazel.gif",
-    "Game/Art/Pics/Animation Styles/Erina320.gif",
-    "Game/Art/Pics/Animation Styles/Erina.gif",
-    "Game/Design/Reference Images/Health Bar 3.png.meta",
-    "Game/Design/Reference Images/Health Bar 2.png.meta",
-    "Game/Design/Reference Images/Health Bar 1.png.meta",
-    "Game/Design/Reference Images.meta",
-    "Game/Design/Player Mechanics.md.meta",
-    "Game/Design/Enemies Mechanics.md.meta",
-    "General notes/NOTES.md",
-    "Unrelated Pics/Nazrin nyn.gif.meta",
-    "Unrelated Pics.meta",
-    "MAIN DASHBOARD.md.meta",
-    "General notes/NOTES.md.meta",
+    "Untitled.md",
+    "Game/Design/To Do List Design.md",
+    "Game/Design/Player Mechanics.md",
+    "Game/Design/Enemies Mechanics.md",
+    "Game/Design/Design notes.md",
+    "Game/Design/Design Dashboard.md",
+    "Game/Program/To Do List Program.md",
+    "Game/Program/Program Dashboard.md",
     "Game/Design/Reference Images/Health Bar 3.png",
     "Game/Design/Reference Images/Health Bar 2.png",
     "Game/Design/Reference Images/Health Bar 1.png",
-    "Game/Design/Player Mechanics.md",
-    "Game/Design/Enemies Mechanics.md",
-    "Unrelated Pics/Nazrin nyn.gif",
-    "MAIN DASHBOARD.md",
-    "Game/Design/Design Dashboard.md",
-    "Game/Design/To Do List Design.md",
-    "Game/Design/Design notes.md",
-    "Game/Program/Program Dashboard.md",
-    "Game/Program/To Do List Program.md",
+    "Game/Art/Pics/Animation Styles/Erina.gif",
+    "Game/Art/Pics/Animation Styles/Erina320.gif",
+    "Game/Design/Player Mechanics.md.meta",
+    "Game/Design/Reference Images/Health Bar 2.png.meta",
+    "Game/Design/Enemies Mechanics.md.meta",
+    "Game/Design/Reference Images.meta",
+    "Game/Design/Reference Images/Health Bar 3.png.meta",
+    "Game/Design/Reference Images/Health Bar 1.png.meta",
+    "Game/Design/Reference Images",
+    "Game/Program/To Do List Program.md.meta",
+    "Game/Program/Program Dashboard.md.meta",
+    "Game/Design/Design Dashboard.md.meta",
+    "Game/Art/Pics/Animation Styles/Hazel570.gif",
+    "Game/Art/Pics/Animation Styles/HBlade.gif",
+    "Game/Art/Pics/Animation Styles/Hazel.gif",
+    "Game/Art/Pics/Animation Styles/HBlade 1.gif",
+    "Game/Art/Pics/Animation Styles/Erina960.gif",
     "General notes/Markdown Cheatsheet.md",
+    "General notes/NOTES.md",
+    "MAIN DASHBOARD.md",
     "Welcome.md"
   ]
 }
