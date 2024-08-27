@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MAIN DASHBOARD.md",
+                "file": "Game/Art/What artstyle should the player character be in.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MAIN DASHBOARD.md",
+                "file": "Game/Art/What artstyle should the player character be in.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MAIN DASHBOARD.md",
+                "file": "Game/Art/What artstyle should the player character be in.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MAIN DASHBOARD.md"
+                "file": "Game/Art/What artstyle should the player character be in.md"
               }
             }
           }
@@ -159,25 +159,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c57c13601a8346f0",
+  "active": "8d4da9e3ac5a5412",
   "lastOpenFiles": [
+    "Game/Art/Pics/Animation Styles/Hazel570.gif",
+    "Game/Art/Pics/Animation Styles/HBlade.gif",
+    "Game/Art/Art Dashboard.md",
+    "Game/Art/Pics/Animation Styles/Hazel.gif",
+    "Game/Art/What artstyle should the player character be in.md",
+    "Game/Art/Pics/Animation Styles/HBlade 1.gif",
+    "Game/Art/Pics/Animation Styles/Erina320.gif",
+    "Game/Art/Pics/Animation Styles/Erina.gif",
+    "Game/Art/Pics/Animation Styles/Erina960.gif",
+    "General notes/Markdown Cheatsheet.md",
     "General notes/NOTES.md",
     "MAIN DASHBOARD.md",
+    "Game/Art/To Do List Art.md",
     "Game/Program/Program Dashboard.md",
     "Game/Program/To Do List Program.md",
-    "Game/Art/To Do List Art.md",
-    "Game/Art/Art Dashboard.md",
     "Game/Design/Design Dashboard.md",
     "Game/Design/Design notes.md",
     "Game/Design/To Do List Design.md",
-    "General notes/Markdown Cheatsheet.md",
+    "Game/Art/Pics/Animation Styles",
+    "Game/Art/Pics",
+    "Game/Art/c3c3ee8a7c31f0cd0350bc3c3426e936.png",
+    "Game/Art/erina.apng",
+    "erina 1.apng",
+    "erina.apng",
     "Unrelated Pics/Nazrin nyn.gif",
     "Unrelated Pics",
     "Game",
     "Game/Art",
     "Game/Program",
     "Game/Design",
-    "General notes",
     "Welcome.md"
   ]
 }
