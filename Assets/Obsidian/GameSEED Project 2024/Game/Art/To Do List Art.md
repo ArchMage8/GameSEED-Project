@@ -1,4 +1,4 @@
-- [ ] Player concept
+- [ ] Player concept *(Partially done)*
 - [ ] Get references for environment
 - [ ] Enemy concepts
 - [ ] Weapon concepts
