@@ -1,7 +1,7 @@
-- [ ] Player concept *(Partially done)*
-- [ ] Get references for environment
-- [ ] Enemy concepts
-- [ ] Weapon concepts
+- [ ] Player concept *(Partially done)* **maxi**
+- [ ] Get references for environment **rafael**
+- [ ] Enemy concepts **rafael**
+- [ ] Weapon concepts **maxi**
 - [ ] Player spritesheet
 - [ ] Enemy spritesheet
 - [ ] Environment basic tilemap (what the player actually stands on)
