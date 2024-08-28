@@ -862,14 +862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d24c1c360d70142811af7ed13377ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sickle: {fileID: 1231375272}
-  Lasso: {fileID: 654811941}
-  Knife: {fileID: 706398476}
-  Default: {fileID: 1319480138}
-  Active_Sickle: 0
-  Active_Lasso: 0
-  Active_Knife: 0
-  Active_Default: 0
 --- !u!1 &1914121703
 GameObject:
   m_ObjectHideFlags: 0
