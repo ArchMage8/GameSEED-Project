@@ -1,7 +1,7 @@
 **Target week 1st week:**
 - [ ] Weapon switch
 - [ ] Player movement
-- [ ] Receive dmg
+- [ ] Health System
 - [ ] 
 
 Idle animation for each weapon?

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Program/To Do List Program.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Program/To Do List Program.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md",
+                "file": "Game/Program/To Do List Program.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Art/What artstyle should the player character be in.md"
+                "file": "Game/Program/To Do List Program.md"
               }
             }
           }
@@ -161,6 +161,9 @@
   },
   "active": "c57c13601a8346f0",
   "lastOpenFiles": [
+    "Game/Program/Program Dashboard.md",
+    "MAIN DASHBOARD.md",
+    "Game/Art/What artstyle should the player character be in.md",
     "Game/Design/Player Mechanics.md",
     "Game/Program/To Do List Program.md.meta",
     "Game/Program/Program Dashboard.md.meta",
@@ -176,16 +179,13 @@
     "Game/Art/Pics/Animation Styles/HBlade.gif",
     "Game/Art/Art Dashboard.md",
     "Game/Art/Pics/Animation Styles/Hazel.gif",
-    "Game/Art/What artstyle should the player character be in.md",
     "Game/Art/Pics/Animation Styles/HBlade 1.gif",
     "Game/Art/Pics/Animation Styles/Erina320.gif",
     "Game/Art/Pics/Animation Styles/Erina.gif",
     "Game/Art/Pics/Animation Styles/Erina960.gif",
     "General notes/Markdown Cheatsheet.md",
     "General notes/NOTES.md",
-    "MAIN DASHBOARD.md",
     "Game/Art/To Do List Art.md",
-    "Game/Program/Program Dashboard.md",
     "Game/Program/To Do List Program.md",
     "Game/Design/Design Dashboard.md",
     "Game/Design/Design notes.md",
