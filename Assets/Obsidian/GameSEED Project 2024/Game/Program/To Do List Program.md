@@ -2,6 +2,5 @@
 - [ ] Weapon switch
 - [ ] Player movement
 - [ ] Health System
-- [ ] 
 
 Idle animation for each weapon?
