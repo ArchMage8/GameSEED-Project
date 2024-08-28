@@ -18,3 +18,4 @@
 - Health Comes in the form of hearts.
 - Player will lose health when coming into contact with the enemy or projectile.
 - Players can only refill health by resting and picking up health drops from defeated enemies.
+- When players lose health from any source, they are give a brief invulneralbility.
