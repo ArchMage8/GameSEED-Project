@@ -4,3 +4,5 @@
 - [ ] Puzzle Mechanics
 - [ ] UI Design
 - [x] Player mechanics
+- [ ] Make a pitch deck
+- [ ] Make a gameplay video
