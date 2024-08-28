@@ -1,41 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponChanger : MonoBehaviour
 {
     private WeaponHandler Handler;
-    
+
     [Header("Weapon To Switch to (Pick One: )")]
     public bool setActiveSickle;
     public bool setActiveLasso;
     public bool setActiveKnife;
     private bool Toggled = false;
+    private bool playerInRange = false;
 
     private void Start()
     {
         ValidateSetup();
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void Update()
     {
+        if (!Toggled && playerInRange && Input.GetKeyDown(KeyCode.X))
+        {
+            ChangeWeapon();
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (!Toggled && collision.CompareTag("Player"))
+        if (!Toggled && collider.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L))
-            {
-                Handler = collision.GetComponent<WeaponHandler>();
-                ChangeWeapon();
-            }
+            Handler = collider.GetComponent<WeaponHandler>();
+            playerInRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Handler = null;
+        if (collision.CompareTag("Player"))
+        {
+            Handler = null;
+            playerInRange = false;
+        }
     }
 
     private void ValidateSetup()
@@ -45,12 +49,11 @@ public class WeaponChanger : MonoBehaviour
         if (setActiveLasso) trueCount++;
         if (setActiveKnife) trueCount++;
 
-        if(trueCount == 0)
+        if (trueCount == 0)
         {
-            Debug.LogError("Pick 1 weapon to switch to");
+            Debug.LogError("Pick 1 weapon to switch to.");
         }
-        
-        if (trueCount > 1)
+        else if (trueCount > 1)
         {
             Debug.LogError("Error: More than one bool is set to true.");
         }
@@ -60,13 +63,13 @@ public class WeaponChanger : MonoBehaviour
     {
         if (Handler == null)
         {
-            Debug.Log("Handler Not Found");
+            Debug.LogError("WeaponHandler component not found.");
         }
         else
         {
-            
             Toggled = true;
             Handler.SetActiveBool(setActiveSickle, setActiveLasso, setActiveKnife);
+            Debug.Log("Weapon changed.");
         }
     }
 }

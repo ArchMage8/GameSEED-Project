@@ -1,6 +1,6 @@
 **Target week 1st week:**
-- [ ] Weapon switch
-- [ ] Player movement
+- [x] Weapon switch
+- [x] Player movement
 - [ ] Health System
 
 Idle animation for each weapon?
