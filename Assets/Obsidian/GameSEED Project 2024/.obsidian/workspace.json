@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Design/Enemies & Boss Mechanics.md",
+                "file": "Game/Art/To Do List Art.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Design/Enemies & Boss Mechanics.md",
+                "file": "Game/Art/To Do List Art.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Design/Enemies & Boss Mechanics.md",
+                "file": "Game/Art/To Do List Art.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Design/Enemies & Boss Mechanics.md"
+                "file": "Game/Art/To Do List Art.md"
               }
             }
           }
@@ -161,19 +161,22 @@
   },
   "active": "c57c13601a8346f0",
   "lastOpenFiles": [
-    "Game/Design/Weapon mechanics.md",
-    "Game/Design/To Do List Design.md",
-    "Game/Design/Player Mechanics.md",
-    "Game/Design/Design notes.md",
-    "Game/Program/To Do List Program.md",
-    "Game/Program/Program Dashboard.md",
-    "Game/Design/Enemies & Boss Mechanics.md",
-    "Game/Design/Enviromental & Puzzle Mechanics.md.meta",
     "Game/Design/Weapon mechanics.md.meta",
+    "Game/Design/Enviromental & Puzzle Mechanics.md.meta",
     "Game/Design/Enemies & Boss Mechanics.md.meta",
-    "Game/Design/Enviromental & Puzzle Mechanics.md",
-    "MAIN DASHBOARD.md",
+    "Game/Design/Enemies Mechanics.md.meta",
+    "Game/Design/Design notes.md",
+    "Game/Design/Design Dashboard.md",
+    "Game/Art/To Do List Art.md",
     "Game/Art/What artstyle should the player character be in.md",
+    "Game/Design/Reference Images/Health Bar 1.png",
+    "Game/Design/Enemies & Boss Mechanics.md",
+    "Game/Program/To Do List Program.md",
+    "Game/Design/Weapon mechanics.md",
+    "Game/Design/Enviromental & Puzzle Mechanics.md",
+    "Game/Program/Program Dashboard.md",
+    "MAIN DASHBOARD.md",
+    "Game/Design/Player Mechanics.md",
     "Game/Program/To Do List Program.md.meta",
     "Game/Program/Program Dashboard.md.meta",
     "Game/Design/Design Dashboard.md.meta",
@@ -191,8 +194,7 @@
     "Game/Art/Pics/Animation Styles/Erina960.gif",
     "General notes/Markdown Cheatsheet.md",
     "General notes/NOTES.md",
-    "Game/Art/To Do List Art.md",
-    "Game/Design/Design Dashboard.md",
+    "Game/Design/To Do List Design.md",
     "Game/Art/c3c3ee8a7c31f0cd0350bc3c3426e936.png",
     "Unrelated Pics/Nazrin nyn.gif",
     "Welcome.md"
