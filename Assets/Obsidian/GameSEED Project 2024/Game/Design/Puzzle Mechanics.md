@@ -9,6 +9,6 @@ Tall grass:
 Planter box:
 - Plants seed
 - Grows weapons overnight/day
-- Some planter boxes can only grow weapons at a certain time of day
-- Weapons grow based off the seed or the planter?
-- 
+- ~~Some planter boxes can only grow weapons at a certain time of day~~
+- ~~Weapons grow based off the seed or the planter?~~ The seed
+- Players will get an infinite seed of the weapons, they get to choose where and when to plant those weapon seeds.
