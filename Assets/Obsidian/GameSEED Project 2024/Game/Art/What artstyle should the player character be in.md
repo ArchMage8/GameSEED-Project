@@ -1,5 +1,4 @@
 
-Ideally we make it 128 ppu for more detail on the environment
 # Option 1
 Pixel Chibi, Ref rabi ribi
 ![[Erina320.gif]]
