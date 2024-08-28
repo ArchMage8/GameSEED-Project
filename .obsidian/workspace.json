@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "42857f2115ca8d86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enemies Mechanics.md",
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Program/To Do List Program.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,13 +25,38 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Weapon mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d800d298a7d94c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enviromental & Puzzle Mechanics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "adc0dea1de9da47a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 404.5
   },
   "right": {
     "id": "f6ee482d4ea7c093",
@@ -109,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md",
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enviromental & Puzzle Mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md",
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enviromental & Puzzle Mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md"
+                "file": "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enviromental & Puzzle Mechanics.md"
               }
             }
           }
@@ -170,26 +183,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "904085d677ea2fc1",
+  "active": "2d800d298a7d94c7",
   "lastOpenFiles": [
-    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enemies Mechanics.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enemies & Boss Mechanics.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Weapon mechanics.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Enviromental & Puzzle Mechanics.md",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Player Mechanics.md",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/To Do List Design.md",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Design notes.md",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Design Dashboard.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Design/Design notes.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Art/What artstyle should the player character be in.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Program/To Do List Program.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Art/To Do List Art.md",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Art/Pics/Animation Styles/Erina.gif",
+    "Assets/Obsidian/GameSEED Project 2024/Game/Program/Program Dashboard.md",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Reference Images/Health Bar 1.png",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Reference Images",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Reference Images/Health Bar 3.png",
     "Assets/Obsidian/GameSEED Project 2024/Game/Design/Reference Images/Health Bar 2.png",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Art/Pics/Animation Styles/Erina.gif",
     "Assets/Obsidian/GameSEED Project 2024/Unrelated Pics/Nazrin nyn.gif",
     "Assets/Obsidian/GameSEED Project 2024/MAIN DASHBOARD.md",
     "Images Used",
     "Assets/Obsidian/GameSEED Project 2024/Game/Art/Art Dashboard.md",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Art/To Do List Art.md",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Program/Program Dashboard.md",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Program/To Do List Program.md",
-    "Assets/Obsidian/GameSEED Project 2024/Game/Art/What artstyle should the player character be in.md",
     "Assets/Obsidian/GameSEED Project 2024/Game/Art/erina.apng",
     "Assets/Obsidian/GameSEED Project 2024/Game/Art/Pics/Animation Styles/Hazel570.gif",
     "Assets/Obsidian/GameSEED Project 2024/Game/Art/Pics/Animation Styles/Hazel.gif",

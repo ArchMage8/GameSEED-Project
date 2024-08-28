@@ -17,7 +17,7 @@
 1. Lasso swing
 2. Cutting tall grass
 3. Throwing knife
-4. Planting seeds(Not Decided)
+4. Planting seeds
 
 **Enemies:  
 1. Boss
