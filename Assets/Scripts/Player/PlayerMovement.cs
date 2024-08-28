@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizonal;
 
-    [Header ("Controls: ")]
+    [Header("Controls: ")]
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public bool isMoving { get; private set; }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
     {
         horizonal = Input.GetAxisRaw("Horizontal");
 
+        isMoving = horizonal != 0f;
+
         Flip();
 
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -46,12 +50,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        if(isFacingRight && horizonal < 0f || !isFacingRight && horizonal > 0f)
+        if (isFacingRight && horizonal < 0f || !isFacingRight && horizonal > 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    public void StopMovement()
+    {
+        horizonal = 0f;
+        rb.velocity = Vector2.zero;
+        isMoving = false;
     }
 }
