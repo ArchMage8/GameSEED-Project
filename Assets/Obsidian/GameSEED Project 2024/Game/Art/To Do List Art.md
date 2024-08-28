@@ -4,8 +4,8 @@
 - [ ] Weapon concepts **maxi**
 - [ ] Player spritesheet
 - [ ] Enemy spritesheet
-- [ ] Environment basic tilemap (what the player actually stands on)
-- [ ] Environment overlay that'll be infront of the tilemap, to make the map not look blocky
+- [ ] Environment basic tilemap (what the player actually stands on) **Hans**
+- [ ] Environment overlay that'll be infront of the tilemap, to make the map not look blocky **Hans**
 - [ ] GUI Wireframe
 - [ ] GUI
 - [ ] Main menu
@@ -17,5 +17,7 @@
 - [ ] Player emission mapping
 - [ ] Environment objects emission mapping
 - [ ] Environmental animations
+
+
 ~~Please review this
 [[What artstyle should the player character be in]]~~
