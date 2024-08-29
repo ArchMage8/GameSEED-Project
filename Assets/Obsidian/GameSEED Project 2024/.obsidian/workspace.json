@@ -1,23 +1,19 @@
 {
   "main": {
-    "id": "880a30e0cdc6add3",
+    "id": "8f60b39de936ede7",
     "type": "split",
     "children": [
       {
-        "id": "89320c1ccce5efa3",
+        "id": "851a05f0337b7054",
         "type": "tabs",
         "children": [
           {
-            "id": "c57c13601a8346f0",
+            "id": "89b15724ece564c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< Updated upstream
-                "file": "Game/Art/To Do List Art.md",
-=======
-                "file": "Game/Design/Player Mechanics.md",
->>>>>>> Stashed changes
+                "file": "Game/Program/To Do List Program.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fe59839f8380cb89",
+    "id": "66bd3ad7d90bbca2",
     "type": "split",
     "children": [
       {
-        "id": "1fb7a03dc3a8cd52",
+        "id": "59f11f33a7820434",
         "type": "tabs",
         "children": [
           {
-            "id": "8d4da9e3ac5a5412",
+            "id": "f07f4e9d8049d5e2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -47,12 +43,12 @@
             }
           },
           {
-            "id": "aa8c896afd72492b",
+            "id": "a904778fdaf2f78b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "health",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,39 +58,34 @@
             }
           },
           {
-            "id": "54afcdfc5e0dcca8",
+            "id": "b48261b3e4f98451",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-    "id": "c745a840800265f7",
+    "id": "6b58515e50b6c4bd",
     "type": "split",
     "children": [
       {
-        "id": "d6f5f17b74dad600",
+        "id": "544f6d284d3f8f12",
         "type": "tabs",
         "children": [
           {
-            "id": "74ea7864129ca8a6",
+            "id": "766ec4c661b84736",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< Updated upstream
-                "file": "Game/Art/To Do List Art.md",
-=======
-                "file": "Game/Design/Player Mechanics.md",
->>>>>>> Stashed changes
+                "file": "Game/Program/To Do List Program.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,23 +97,19 @@
             }
           },
           {
-            "id": "6895d4eb61a883b9",
+            "id": "565ab2a324c98cba",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< Updated upstream
-                "file": "Game/Art/To Do List Art.md",
-=======
-                "file": "Game/Design/Player Mechanics.md",
->>>>>>> Stashed changes
+                "file": "Game/Program/To Do List Program.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a9777d7b29f527c5",
+            "id": "b85a8890b24f66f8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,38 +120,21 @@
             }
           },
           {
-            "id": "537c2ffaa35dc317",
+            "id": "ed009be9b87d9605",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< Updated upstream
-                "file": "Game/Art/To Do List Art.md"
-=======
-                "file": "Game/Design/Player Mechanics.md"
->>>>>>> Stashed changes
+                "file": "Game/Program/To Do List Program.md"
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "75386b1c4225bae3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4df03d4ed09029e5",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,60 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c57c13601a8346f0",
+  "active": "89b15724ece564c1",
   "lastOpenFiles": [
-<<<<<<< Updated upstream
-    "Game/Art/Pics/Environment refs.meta",
-    "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg.meta",
-    "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md.meta",
-    "113793915_p0.png.meta",
-    "Game/Art/Pics/Environment refs/Crowded Building.jpg.meta",
-    "Game/Art/Pics/Environment refs/educational_work__post_apocalypse_by_anna_tu_ri_d98b4i3-fullview.jpg.meta",
-    "Game/Art/Pics/Environment refs/9dcf2847994d26b2ef1a064189285489-498778600.jpg.meta",
-    "Game/Art/Pics/Environment refs/Abandoned+Factory+H_inkd_web_blog-1071-676981870.jpg.meta",
-    "Game/Art/Art references.md",
-    "113793915_p0.png",
-    "Game/Art/To Do List Art.md",
-    "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg",
-    "Game/Art/Pics/Environment refs",
-    "Game/Art/Pics/Environment refs/Abandoned+Factory+H_inkd_web_blog-1071-676981870.jpg",
-    "Game/Art/Pics/Environment refs/9dcf2847994d26b2ef1a064189285489-498778600.jpg",
-    "Game/Art/Pics/Environment refs/educational_work__post_apocalypse_by_anna_tu_ri_d98b4i3-fullview.jpg",
-    "Game/Art/Pics/Environment refs/Crowded Building.jpg",
-    "Game/Art/Art references.md.meta",
-=======
-    "Game/Program/To Do List Program.md",
-    "Game/Design/Enemies & Boss Mechanics.md",
     "Game/Program/Program Dashboard.md",
-    "Game/Design/Weapon mechanics.md",
-    "Game/Design/To Do List Design.md",
-    "Game/Design/Player Mechanics.md",
-    "Game/Design/Design notes.md",
-    "Game/Design/Enviromental & Puzzle Mechanics.md.meta",
-    "Game/Design/Weapon mechanics.md.meta",
-    "Game/Design/Enemies & Boss Mechanics.md.meta",
-    "Game/Design/Enviromental & Puzzle Mechanics.md",
-    "MAIN DASHBOARD.md",
->>>>>>> Stashed changes
-    "Game/Art/What artstyle should the player character be in.md",
-    "Game/Design/Weapon mechanics.md.meta",
-    "Game/Design/Design notes.md",
-    "Game/Design/Design Dashboard.md",
-    "Game/Design/Reference Images/Health Bar 1.png",
     "Game/Design/Enemies & Boss Mechanics.md",
-    "Game/Program/To Do List Program.md",
-    "Game/Design/Weapon mechanics.md",
-    "Game/Design/Enviromental & Puzzle Mechanics.md",
-    "Game/Program/Program Dashboard.md",
-    "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md",
-    "Game/Design/Player Mechanics.md",
-    "Game/Art/Pics/Animation Styles/Hazel570.gif",
-    "Game/Art/Pics/Animation Styles/HBlade.gif",
-    "Game/Art/Art Dashboard.md",
-    "Game/Art/Pics/Animation Styles/Hazel.gif",
-    "General notes/Markdown Cheatsheet.md",
-    "General notes/NOTES.md",
-    "Game/Design/To Do List Design.md",
-    "Welcome.md"
+    "Game/Program/To Do List Program.md"
   ]
 }

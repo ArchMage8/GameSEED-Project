@@ -51,7 +51,7 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        if (Health < 0)
+        if (Health <= 0)
         {
             Health = 0;
             Death();

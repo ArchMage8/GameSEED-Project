@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Controls: ")]
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
+   
     private bool isFacingRight = true;
     [Space(30)]
 
@@ -35,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
     }
 
