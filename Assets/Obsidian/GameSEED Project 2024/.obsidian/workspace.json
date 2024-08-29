@@ -13,7 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Game/Art/To Do List Art.md",
+=======
+                "file": "Game/Design/Player Mechanics.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "health",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +69,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +90,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Game/Art/To Do List Art.md",
+=======
+                "file": "Game/Design/Player Mechanics.md",
+>>>>>>> Stashed changes
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Game/Art/To Do List Art.md",
+=======
+                "file": "Game/Design/Player Mechanics.md",
+>>>>>>> Stashed changes
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Game/Art/To Do List Art.md"
+=======
+                "file": "Game/Design/Player Mechanics.md"
+>>>>>>> Stashed changes
               }
             }
           }
@@ -161,6 +178,7 @@
   },
   "active": "c57c13601a8346f0",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "Game/Art/Pics/Environment refs.meta",
     "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg.meta",
     "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md.meta",
@@ -179,6 +197,20 @@
     "Game/Art/Pics/Environment refs/educational_work__post_apocalypse_by_anna_tu_ri_d98b4i3-fullview.jpg",
     "Game/Art/Pics/Environment refs/Crowded Building.jpg",
     "Game/Art/Art references.md.meta",
+=======
+    "Game/Program/To Do List Program.md",
+    "Game/Design/Enemies & Boss Mechanics.md",
+    "Game/Program/Program Dashboard.md",
+    "Game/Design/Weapon mechanics.md",
+    "Game/Design/To Do List Design.md",
+    "Game/Design/Player Mechanics.md",
+    "Game/Design/Design notes.md",
+    "Game/Design/Enviromental & Puzzle Mechanics.md.meta",
+    "Game/Design/Weapon mechanics.md.meta",
+    "Game/Design/Enemies & Boss Mechanics.md.meta",
+    "Game/Design/Enviromental & Puzzle Mechanics.md",
+    "MAIN DASHBOARD.md",
+>>>>>>> Stashed changes
     "Game/Art/What artstyle should the player character be in.md",
     "Game/Design/Weapon mechanics.md.meta",
     "Game/Design/Design notes.md",
