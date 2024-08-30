@@ -4,35 +4,53 @@ using System.Collections.Generic;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("Patrol Settings")]
     public float leftOffset;
     public float rightOffset;
     public float patrolSpeed = 2f;
-    public float detectionRange = 5f;
     public float StopDuration = 2f;
+    [Space(20)]
+
+    [Header("Chase Settings")]
+    public float detectionRange = 5f;
+    public float ChaseSpeedScaler = 1.5f;
+    [Space(20)]
+
+    [Header("Layer Settings")]
     public LayerMask playerLayer;
 
     private Vector3 leftPatrolPoint;
     private Vector3 rightPatrolPoint;
     private bool movingRight = true;
-    private bool Detected;
+    public bool Detected;
+    private bool canPatrol = true;
+    private bool canFlip = true;
+
+    private EnemyCombatHandler enemyCombatHandler;
 
     private void Start()
     {
         leftPatrolPoint = transform.position + Vector3.left * leftOffset;
         rightPatrolPoint = transform.position + Vector3.right * rightOffset;
+
+        enemyCombatHandler = GetComponent<EnemyCombatHandler>();
     }
 
     private void Update()
     {
         CheckForPlayer();
 
-        if (Detected)
+        if (enemyCombatHandler.CanMove)
         {
-            ChasePlayer();
-        }
-        else
-        {
-            Patrol();
+
+            if (Detected)
+            {
+                ChasePlayer();
+            }
+            else if (canPatrol)
+            {
+                Patrol();
+            }
         }
     }
 
@@ -43,7 +61,7 @@ public class EnemyMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, rightPatrolPoint, patrolSpeed * Time.deltaTime);
             if (transform.position == rightPatrolPoint)
             {
-                StartCoroutine(MoveLeft());
+                StartCoroutine(ChangeDirection());
             }
         }
         else
@@ -51,7 +69,7 @@ public class EnemyMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, leftPatrolPoint, patrolSpeed * Time.deltaTime);
             if (transform.position == leftPatrolPoint)
             {
-                StartCoroutine(MoveRight());
+                StartCoroutine(ChangeDirection());
             }
         }
     }
@@ -75,22 +93,45 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveLeft()
+    private IEnumerator ChangeDirection()
     {
-        yield return new WaitForSeconds(StopDuration);
-        movingRight = false;
-        Flip();
-    }
 
-    private IEnumerator MoveRight()
-    {
-        yield return new WaitForSeconds(StopDuration);
-        movingRight = true;
-        Flip();
+        if (canFlip)
+        {
+            canFlip = false;
+            yield return new WaitForSeconds(StopDuration);
+            canPatrol = true;
+            if (movingRight)
+            {
+                movingRight = false;
+                Flip();
+            }
+
+            else if (!movingRight)
+            {
+                movingRight = true;
+                Flip();
+            }
+        canFlip = true;
+        }
     }
 
     private void ChasePlayer()
     {
-       
+        canPatrol = false;
+        
+        Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector3 targetPosition = new Vector3(playerPosition.x, transform.position.y, transform.position.z);
+
+        if (movingRight && transform.position.x < rightPatrolPoint.x ||
+            !movingRight && transform.position.x > leftPatrolPoint.x)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, patrolSpeed * ChaseSpeedScaler * Time.deltaTime);
+        }
+        else
+        {
+            Detected = false;
+            StartCoroutine(ChangeDirection());
+        }
     }
 }
