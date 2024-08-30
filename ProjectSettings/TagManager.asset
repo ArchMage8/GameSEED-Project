@@ -56,6 +56,9 @@ TagManager:
   - name: EnvironmentFront
     uniqueID: 627772819
     locked: 0
+  - name: Particles
+    uniqueID: 937862123
+    locked: 0
   - name: Foreground
     uniqueID: 2167238333
     locked: 0
