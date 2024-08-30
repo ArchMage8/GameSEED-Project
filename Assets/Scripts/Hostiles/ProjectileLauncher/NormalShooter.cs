@@ -8,13 +8,28 @@ public class NormalShooter : MonoBehaviour
     [SerializeField] private float delayBetweenShots = 1f;
     [SerializeField] private int direction = 0;
 
+    private EnemyCombatHandler enemyCombatHandler;
+
     private float timeSinceLastShot = 0f;
+
+    private void Start()
+    {
+        if (this.gameObject.GetComponent<EnemyCombatHandler>() != null)
+        {
+            enemyCombatHandler = GetComponent<EnemyCombatHandler>();
+        }
+
+        else
+        {
+            Debug.LogError("Combat Handler Missing");
+        }
+    }
 
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
 
-        if (timeSinceLastShot >= delayBetweenShots)
+        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
         {
             ShootProjectile();
             timeSinceLastShot = 0f;
@@ -54,7 +69,7 @@ public class NormalShooter : MonoBehaviour
 
         private void Update()
         {
-            transform.Translate(direction * speed * Time.deltaTime);
+            transform.Translate(speed * Time.deltaTime * direction);
         }
     }
 }
