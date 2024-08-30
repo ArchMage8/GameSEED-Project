@@ -10,13 +10,28 @@ public class ArcShooter : MonoBehaviour
     [SerializeField] private float launchAngle = 45f; // Angle in degrees
     [SerializeField] private float delayBetweenShots = 2f;
 
+    private EnemyCombatHandler enemyCombatHandler;
+
     private float timeSinceLastShot = 0f;
+
+    private void Start()
+    {
+        if (this.gameObject.GetComponent<EnemyCombatHandler>() != null)
+        {
+            enemyCombatHandler = GetComponent<EnemyCombatHandler>();
+        }
+
+        else
+        {
+            Debug.LogError("Combat Handler Missing");
+        }
+    }
 
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
 
-        if (timeSinceLastShot >= delayBetweenShots)
+        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
         {
             LaunchProjectile();
             timeSinceLastShot = 0f;
