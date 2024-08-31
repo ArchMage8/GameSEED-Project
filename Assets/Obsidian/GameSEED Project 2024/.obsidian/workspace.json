@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Program/To Do List Program.md",
+                "file": "Game/Art/To Do List Art.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Program/To Do List Program.md",
+                "file": "Game/Art/To Do List Art.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Program/To Do List Program.md",
+                "file": "Game/Art/To Do List Art.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Program/To Do List Program.md"
+                "file": "Game/Art/To Do List Art.md"
               }
             }
           }
@@ -148,8 +148,42 @@
   },
   "active": "89b15724ece564c1",
   "lastOpenFiles": [
-    "Game/Program/Program Dashboard.md",
+    "Game/Art/What artstyle should the player character be in.md",
+    "Game/Art/To Do List Art.md",
+    "Game/Art/Art references.md",
+    "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg",
+    "Game/Art/Art Dashboard.md",
+    "Game/Art/Pics/Environment refs.meta",
+    "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg.meta",
+    "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md.meta",
+    "113793915_p0.png.meta",
+    "Game/Art/Pics/Environment refs/Crowded Building.jpg.meta",
+    "Game/Art/Pics/Environment refs/educational_work__post_apocalypse_by_anna_tu_ri_d98b4i3-fullview.jpg.meta",
+    "Game/Art/Pics/Environment refs/9dcf2847994d26b2ef1a064189285489-498778600.jpg.meta",
+    "Game/Art/Pics/Environment refs/Abandoned+Factory+H_inkd_web_blog-1071-676981870.jpg.meta",
+    "113793915_p0.png",
+    "Game/Art/Pics/Environment refs",
+    "Game/Art/Pics/Environment refs/Abandoned+Factory+H_inkd_web_blog-1071-676981870.jpg",
+    "Game/Art/Pics/Environment refs/9dcf2847994d26b2ef1a064189285489-498778600.jpg",
+    "Game/Art/Pics/Environment refs/educational_work__post_apocalypse_by_anna_tu_ri_d98b4i3-fullview.jpg",
+    "Game/Art/Pics/Environment refs/Crowded Building.jpg",
+    "Game/Art/Art references.md.meta",
+    "Game/Design/Design notes.md",
+    "Game/Design/Design Dashboard.md",
+    "Game/Design/Reference Images/Health Bar 1.png",
     "Game/Design/Enemies & Boss Mechanics.md",
-    "Game/Program/To Do List Program.md"
+    "Game/Program/To Do List Program.md",
+    "Game/Design/Weapon mechanics.md",
+    "Game/Design/Enviromental & Puzzle Mechanics.md",
+    "Game/Program/Program Dashboard.md",
+    "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md",
+    "Game/Design/Player Mechanics.md",
+    "Game/Art/Pics/Animation Styles/Hazel570.gif",
+    "Game/Art/Pics/Animation Styles/HBlade.gif",
+    "Game/Art/Pics/Animation Styles/Hazel.gif",
+    "General notes/Markdown Cheatsheet.md",
+    "General notes/NOTES.md",
+    "Game/Design/To Do List Design.md",
+    "Welcome.md"
   ]
 }

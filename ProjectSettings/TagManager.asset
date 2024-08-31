@@ -65,3 +65,6 @@ TagManager:
   - name: LevelBorders
     uniqueID: 1508317085
     locked: 0
+  - name: Transition
+    uniqueID: 4009563995
+    locked: 0
