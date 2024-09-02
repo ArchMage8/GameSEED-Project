@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("System: ")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public bool isGrounded;
+    public bool canMove = true;
 
     public bool isMoving { get; private set; }
 
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
         Flip();
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && canMove)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -42,11 +44,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
+        isGrounded = IsGrounded();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizonal * speed, rb.velocity.y);
+        if (canMove)
+        {
+            rb.velocity = new Vector2(horizonal * speed, rb.velocity.y);
+        }
     }
 
     private bool IsGrounded()
@@ -56,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        if (isFacingRight && horizonal < 0f || !isFacingRight && horizonal > 0f)
+        if (isFacingRight && horizonal < 0f || !isFacingRight && horizonal > 0f && canMove)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
