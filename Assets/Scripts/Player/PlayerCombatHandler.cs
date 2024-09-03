@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class PlayerCombatHandler : MonoBehaviour
 {
+    [Header("Attack Settings")]
     public float rayLength = 5f;
     public int damageDealt = 1;
+
+    [Header("Animation and Movement")]
     public Animator playerAnimator;
     public GameObject MainObject;
-
-
 
     private bool canAttack = true;
     public bool isAttacking { get; private set; }
@@ -42,7 +43,7 @@ public class PlayerCombatHandler : MonoBehaviour
         {
             rb.gravityScale = 1;
         }
-        
+
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
 
         foreach (var hit in hits)

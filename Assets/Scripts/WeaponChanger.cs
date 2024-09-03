@@ -18,9 +18,12 @@ public class WeaponChanger : MonoBehaviour
 
     private void Update()
     {
-        if (!Toggled && playerInRange && Input.GetKeyDown(KeyCode.X))
+        if (!Toggled && playerInRange)
         {
-            ChangeWeapon();
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L))
+            {
+                ChangeWeapon();
+            }
         }
     }
 

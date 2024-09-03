@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "Game/Design/Weapon mechanics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "Game/Design/Weapon mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Art/To Do List Art.md",
+                "file": "Game/Design/Weapon mechanics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Art/To Do List Art.md"
+                "file": "Game/Design/Weapon mechanics.md"
               }
             }
           }
@@ -148,8 +148,11 @@
   },
   "active": "89b15724ece564c1",
   "lastOpenFiles": [
-    "Game/Art/What artstyle should the player character be in.md",
+    "Game/Program/To Do List Program.md",
+    "Game/Program/Program Dashboard.md",
+    "Game/Design/Player Mechanics.md",
     "Game/Art/To Do List Art.md",
+    "Game/Art/What artstyle should the player character be in.md",
     "Game/Art/Art references.md",
     "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg",
     "Game/Art/Art Dashboard.md",
@@ -172,12 +175,9 @@
     "Game/Design/Design Dashboard.md",
     "Game/Design/Reference Images/Health Bar 1.png",
     "Game/Design/Enemies & Boss Mechanics.md",
-    "Game/Program/To Do List Program.md",
     "Game/Design/Weapon mechanics.md",
     "Game/Design/Enviromental & Puzzle Mechanics.md",
-    "Game/Program/Program Dashboard.md",
     "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md",
-    "Game/Design/Player Mechanics.md",
     "Game/Art/Pics/Animation Styles/Hazel570.gif",
     "Game/Art/Pics/Animation Styles/HBlade.gif",
     "Game/Art/Pics/Animation Styles/Hazel.gif",
