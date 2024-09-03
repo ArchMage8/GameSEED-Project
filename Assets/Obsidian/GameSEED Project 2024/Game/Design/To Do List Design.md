@@ -1,7 +1,9 @@
 - [ ] Level Design (Night/Day)
 - [ ] Make Detailed enemies/boss mechanics
+	- [x] Enemies
+	- [ ] Boss
 - [x] Weapon mechanics
-- [ ] Puzzle Mechanics
+- [x] Puzzle Mechanics
 - [ ] UI Design
 - [x] Player mechanics
 - [ ] Make a pitch deck

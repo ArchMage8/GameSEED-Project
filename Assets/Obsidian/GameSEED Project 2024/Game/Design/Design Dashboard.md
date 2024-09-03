@@ -3,5 +3,5 @@
 [[Design notes]]
 [[Player Mechanics]]
 [[Weapon mechanics]]
-[[Enemies & Boss Mechanics]]
+[[Enemies]]
 [[Enviromental & Puzzle Mechanics]]

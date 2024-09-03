@@ -2,7 +2,7 @@
 - [x] Weapon switch
 - [x] Player movement
 - [x] Health System
-- [ ] Enemy AI (refer to [[Enemies & Boss Mechanics]])
+- [ ] Enemy AI (refer to [[Enemies]])
 - [ ] Weapon Mechanics (refer to [[Weapon mechanics]])
 - [ ] Day/Night System (refer to [[Enviromental & Puzzle Mechanics]])
 - [ ] Weapon Planting system (refer to [[Enviromental & Puzzle Mechanics]])

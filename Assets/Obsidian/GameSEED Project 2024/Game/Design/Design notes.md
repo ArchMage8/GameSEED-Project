@@ -26,3 +26,5 @@
 how does weapon spawn?
 Plant seeds, grow weapons?
 Seed plant -> change state if seed planted grow weapon?
+
+Camera: 18 x 10

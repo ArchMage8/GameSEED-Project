@@ -2,6 +2,7 @@
 - AD or ←→ to move
 - Space/C/K to Jump
 - V or J to Attack
+- X or L to interact
 #### Movement
 - Players move side to side
 - Players move on a constant speed (no acceleration)
