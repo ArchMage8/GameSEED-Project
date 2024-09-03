@@ -54,6 +54,9 @@ TagManager:
   - name: Player
     uniqueID: 281167803
     locked: 0
+  - name: Tilemap
+    uniqueID: 1398368895
+    locked: 0
   - name: EnvironmentFront
     uniqueID: 627772819
     locked: 0
