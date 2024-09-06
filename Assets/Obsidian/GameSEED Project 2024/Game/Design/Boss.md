@@ -24,7 +24,7 @@ Every attack will have a wind up period before actually attacking.
 - Constantly active on the room of the boss, deactivates attack when not in boss room.
 - Vines spawn point will find the player position then when it decides to attack give it a delay of 2 seconds to display spawn point and then protrude. 
 - Spike will stay for 2 seconds before disappearing
-- occurs every 6 seconds (make this changeable, exclude delay times).
+- occurs every 8 seconds (make this changeable, counted after mark spawn).
 ![[mark.png]]
 ![[mark2.png]]
 ![[mark 3.png]]
@@ -39,20 +39,23 @@ Since i dont know what better way to convey the direction/movement of the projec
 
 
 #### All direction projectiles
+
 Shoots projectile to all directions all at once
 ![[pattern 2.png]]
 
 ##### Left & right facing projectiles
+
 ![[Activation zone.png]]
 -Only activates when the player is in the activation zone.
+
 ![[Left and right.png]]
 - Shoots 4 projectiles
 
 
 #### Vines shooting up from floors
 - have the same mark and delay mechanics like "Vines that tracks the player position" attack
-- Spike stay for 1 second before disappearing
-- have a delay of 5 seconds
+- Spikes stay for 1 second before disappearing
+- have a mark delay of 5 seconds
 
 Theres 2 phases on this attack:
 
