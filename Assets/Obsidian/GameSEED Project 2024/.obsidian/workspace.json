@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Design/Weapon mechanics.md",
+                "file": "Game/Design/Boss.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Design/Weapon mechanics.md",
+                "file": "Game/Design/Boss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Design/Weapon mechanics.md",
+                "file": "Game/Design/Boss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Design/Weapon mechanics.md"
+                "file": "Game/Design/Boss.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   "active": "89b15724ece564c1",
   "lastOpenFiles": [
     "Game/Program/To Do List Program.md",
+    "Game/Design/Enemies.md",
+    "Game/Design/Weapon mechanics.md",
     "Game/Program/Program Dashboard.md",
     "Game/Design/Player Mechanics.md",
     "Game/Art/To Do List Art.md",
@@ -175,7 +177,6 @@
     "Game/Design/Design Dashboard.md",
     "Game/Design/Reference Images/Health Bar 1.png",
     "Game/Design/Enemies & Boss Mechanics.md",
-    "Game/Design/Weapon mechanics.md",
     "Game/Design/Enviromental & Puzzle Mechanics.md",
     "Game/Art/Pics/Environment refs/MAIN DASHBOARD.md",
     "Game/Art/Pics/Animation Styles/Hazel570.gif",
