@@ -52,7 +52,6 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (canPatrol)
             {
-                isMoving = true;
                 Patrol();
             }
         }
