@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public float rightOffset;
     public float patrolSpeed = 2f;
     public float StopDuration = 2f;
+    [SerializeField] private Animator animator;
     [Space(20)]
 
     [Header("Chase Settings")]
@@ -25,8 +26,8 @@ public class EnemyMovement : MonoBehaviour
     public bool Detected;
     private bool canPatrol = true;
     private bool canFlip = true;
-    private bool isMoving = false;
-    public Animator animator;
+    private bool isMoving = true;
+   
 
     private EnemyCombatHandler enemyCombatHandler;
 
