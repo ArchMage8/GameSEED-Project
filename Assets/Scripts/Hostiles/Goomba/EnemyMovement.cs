@@ -25,6 +25,8 @@ public class EnemyMovement : MonoBehaviour
     public bool Detected;
     private bool canPatrol = true;
     private bool canFlip = true;
+    private bool isMoving = false;
+    public Animator animator;
 
     private EnemyCombatHandler enemyCombatHandler;
 
@@ -39,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         CheckForPlayer();
+        updateAnimation();
 
         if (enemyCombatHandler.CanMove)
         {
@@ -49,6 +52,7 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (canPatrol)
             {
+                isMoving = true;
                 Patrol();
             }
         }
@@ -98,8 +102,10 @@ public class EnemyMovement : MonoBehaviour
 
         if (canFlip)
         {
+            isMoving = false;
             canFlip = false;
             yield return new WaitForSeconds(StopDuration);
+            isMoving = true;
             canPatrol = true;
             if (movingRight)
             {
@@ -133,5 +139,10 @@ public class EnemyMovement : MonoBehaviour
             Detected = false;
             StartCoroutine(ChangeDirection());
         }
+    }
+
+    private void updateAnimation()
+    {
+       animator.SetBool("IsWalking", isMoving);
     }
 }
