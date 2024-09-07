@@ -1,22 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-    public int Health;
+    [Header ("Health UI")]
     public int numOfHearts;
 
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    [Space(20)]
 
+    [Header ("Core System")]
+    public int Health;
+    public int invincibleDuration;
+    [SerializeField] private float flickerRate = 0.5f;
+
+    private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
+    private bool Invincible;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -50,14 +60,18 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Health -= damage;
-        if (Health <= 0)
+        if (!Invincible)
         {
-            Health = 0;
-            Death();
-        }
+            Health -= damage;
+            StartCoroutine(InvincibleState());
+            if (Health <= 0)
+            {
+                Health = 0;
+                Death();
+            }
 
-        UpdateHearts();
+            UpdateHearts();
+        }
     }
 
     public void GainHealth(int amount)
@@ -93,6 +107,23 @@ public class HealthSystem : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+    }
+
+    private IEnumerator InvincibleState()
+    {
+        Invincible = true;
+        
+        float timer = 0f;
+        while (timer < invincibleDuration)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+            yield return new WaitForSeconds(flickerRate);
+            timer += 0.1f;
+        }
+
+        Invincible = false;
+        spriteRenderer.enabled = true;
+        
     }
 
     private void Death()
