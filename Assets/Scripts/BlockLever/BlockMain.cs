@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BlockMain : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class BlockMain : MonoBehaviour
     private Vector3 originalPosition;
     private bool isMoving = false;
     private bool isOpen = false;
+    private GameObject player;
+
 
     private void Start()
     {
@@ -28,7 +31,28 @@ public class BlockMain : MonoBehaviour
         StartCoroutine(Move());
     }
 
-    private System.Collections.IEnumerator Move()
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player = collision.gameObject;
+            player.transform.parent = transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (player != null)
+            {
+                player.transform.parent = null;
+                player = null;
+            }
+        }
+    }
+
+    private IEnumerator Move()
     {
         isMoving = true;
 
