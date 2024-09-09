@@ -18,6 +18,7 @@ public class HealthSystem : MonoBehaviour
     public int Health;
     public int invincibleDuration;
     [SerializeField] private float flickerRate = 0.5f;
+    [SerializeField] private GameObject DeathCanvas;
 
     private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
@@ -27,6 +28,8 @@ public class HealthSystem : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        DeathCanvas.SetActive(false);
     }
 
     private void Update()
@@ -129,6 +132,7 @@ public class HealthSystem : MonoBehaviour
     private void Death()
     {
         playerMovement.StopMovement();
-        Debug.Log("Setup the death logic");
+        DeathCanvas.SetActive(true);
+        playerMovement.canMove = false;
     }
 }
