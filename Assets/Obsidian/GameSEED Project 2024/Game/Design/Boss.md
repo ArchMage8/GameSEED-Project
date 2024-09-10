@@ -52,7 +52,7 @@ Shoots projectile to all directions all at once
 - Shoots 4 projectiles
 
 
-#### Vines shooting up from floors
+#### Vines shooting up from floors (REDACTED)
 - have the same mark and delay mechanics like "Vines that tracks the player position" attack
 - Spikes stay for 1 second before disappearing
 - have a mark delay of 5 seconds
