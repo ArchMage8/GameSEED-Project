@@ -28,9 +28,9 @@ public class CameraVisonBlock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject != null)
+        if (other.gameObject == Detector)
         {
-            Debug.Log("Test");
+            Debug.Log("Enter");
             Target.SetActive(false);
             TestBool = true;
         }
@@ -40,6 +40,7 @@ public class CameraVisonBlock : MonoBehaviour
     {
         if (other.gameObject == Detector)
         {
+            Debug.Log("Exit");
             Target.SetActive(true);
         }
     }
