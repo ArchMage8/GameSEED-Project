@@ -4,40 +4,42 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Animator animator;
+    public PlayerCombatHandler combatHandler;
 
-    private void Update()
+    public void Update()
     {
-        if (rb != null)
+        if(rb.velocity.x != 0)
         {
-            if (rb.velocity.x != 0)
-            {
-                animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-            }
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                animator.SetBool("isJump", true);
-            }
-            else
-            {
-                animator.SetBool("isJump", false);
-            }
-
-            if(rb.velocity.y < 0)
-            {
-                animator.SetBool("isFalling", true);
-            }
-            else
-            {
-                animator.SetBool("isFalling", false);
-            }
- 
+            //Walk
+            animator.SetFloat("X", 1);
+            animator.SetFloat("Y", 0);
         }
+
+        else if (Input.GetButtonDown("Jump"))
+        {
+            //Jump
+            animator.SetFloat("X", 1);
+            animator.SetFloat("Y", 0);
+        }
+
+        else if(rb.velocity.y < 0)
+        {
+            animator.SetFloat("X", 0);
+            animator.SetFloat("Y", -1);
+        }
+
+        else if (combatHandler.isAttacking)
+        {
+            animator.SetFloat("X", 1);
+            animator.SetFloat("Y", 1);
+        }
+
         else
         {
-            Debug.LogWarning("Rigidbody2D component not found!");
+            animator.SetFloat("X", 0);
+            animator.SetFloat("Y", 0);
         }
     }
 }
