@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 654811942}
   - component: {fileID: 654811943}
   m_Layer: 0
-  m_Name: Lasso
+  m_Name: Sickle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1231375276}
   - component: {fileID: 1231375277}
   m_Layer: 0
-  m_Name: Sickle
+  m_Name: Lasso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
