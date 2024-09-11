@@ -40,8 +40,10 @@ public class Checkpoint : MonoBehaviour
             player.transform.position = currentCheckpoint.position;  // Teleport player to the current checkpoint position
 
             PlayerMovement temp = player.GetComponent<PlayerMovement>();
+            HealthSystem healthTemp = player.GetComponent<HealthSystem>();
 
             temp.canMove = true;
+            healthTemp.Health = 5;
         }
     }
 

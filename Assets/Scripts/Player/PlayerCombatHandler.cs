@@ -38,6 +38,7 @@ public class PlayerCombatHandler : MonoBehaviour
         playerAnimator.SetTrigger("Attack");
 
         playerMovement.canMove = false;
+        playerMovement.StopMovement();
 
         if (!playerMovement.isGrounded)
         {
