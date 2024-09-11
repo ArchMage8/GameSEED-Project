@@ -15,6 +15,14 @@ public class BossAttackManager : MonoBehaviour
     public float delayAfterCycle = 5f;
 
     private bool isCycling = false;
+    private EnemyCombatHandler enemyCombatHandler;
+    private bool canAttack;
+
+    private void Start()
+    {
+        enemyCombatHandler = GetComponent<EnemyCombatHandler>();
+        canAttack = enemyCombatHandler.CanAttack;
+    }
 
     private void Update()
     {
@@ -58,7 +66,9 @@ public class BossAttackManager : MonoBehaviour
         // Delay after full cycle
         yield return new WaitForSeconds(delayAfterCycle);
 
-        // Repeat cycle
-        StartCoroutine(AttackCycle());
+        if (canAttack)
+        {
+            StartCoroutine(AttackCycle());
+        }
     }
 }

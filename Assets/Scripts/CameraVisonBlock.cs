@@ -8,8 +8,6 @@ public class CameraVisonBlock : MonoBehaviour
     public GameObject Detector;
     public GameObject Target;
 
-    private bool TestBool = false;
-
     private void Start()
     {
         Debug.Log("Test");
@@ -17,21 +15,12 @@ public class CameraVisonBlock : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        if (TestBool)
-        {
-            Debug.Log("test2");
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject != null)
+        if (other.gameObject == Detector)
         {
             Debug.Log("Test");
             Target.SetActive(false);
-            TestBool = true;
         }
     }
 
