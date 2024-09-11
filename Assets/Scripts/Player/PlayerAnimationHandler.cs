@@ -17,11 +17,9 @@ public class PlayerAnimationHandler : MonoBehaviour
             animator.SetFloat("Y", 0);
         }
 
-        else if (Input.GetButtonDown("Jump"))
+        else if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Jump
-            animator.SetFloat("X", 1);
-            animator.SetFloat("Y", 0);
+           StartCoroutine(JumpLogic());
         }
 
         else if(rb.velocity.y < 0)
@@ -36,10 +34,23 @@ public class PlayerAnimationHandler : MonoBehaviour
             animator.SetFloat("Y", 1);
         }
 
-        else
+        else if(rb.velocity.y == 0 && rb.velocity.x == 0)
         {
             animator.SetFloat("X", 0);
             animator.SetFloat("Y", 0);
+        }
+    }
+
+    private IEnumerator JumpLogic()
+    {
+        yield return null;
+        while (rb.velocity.y > 0)
+        {
+            Debug.Log("Jump");
+            animator.SetFloat("X", 1);
+            animator.SetFloat("Y", 0);
+            yield return null;
+
         }
     }
 }
