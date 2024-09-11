@@ -8,27 +8,38 @@ public class CameraVisonBlock : MonoBehaviour
     public GameObject Detector;
     public GameObject Target;
 
+    private bool TestBool = false;
+
     private void Start()
     {
-        if (Target != null)
+        Debug.Log("Test");
+        Target.SetActive(true);
+        
+    }
+
+    private void Update()
+    {
+        if (TestBool)
         {
-            Target.SetActive(false);
+            Debug.Log("test2");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == Detector && Target != null)
+        if (other.gameObject != null)
         {
-            Target.SetActive(true);
+            Debug.Log("Test");
+            Target.SetActive(false);
+            TestBool = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == Detector && Target != null)
+        if (other.gameObject == Detector)
         {
-            Target.SetActive(false);
+            Target.SetActive(true);
         }
     }
 }
