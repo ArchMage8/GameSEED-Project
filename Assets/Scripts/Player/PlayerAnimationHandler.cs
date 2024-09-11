@@ -8,13 +8,18 @@ public class PlayerAnimationHandler : MonoBehaviour
     public Animator animator;
     public PlayerCombatHandler combatHandler;
 
+    private bool isFalling = false;
+
     public void Update()
     {
         if(rb.velocity.x != 0)
         {
             //Walk
-            animator.SetFloat("X", 1);
-            animator.SetFloat("Y", 0);
+            if (!isFalling)
+            {
+                animator.SetFloat("X", 1);
+                animator.SetFloat("Y", 0);
+            }
         }
 
         else if (Input.GetKeyDown(KeyCode.Space))
@@ -22,8 +27,9 @@ public class PlayerAnimationHandler : MonoBehaviour
            StartCoroutine(JumpLogic());
         }
 
-        else if(rb.velocity.y < 0)
+        else if(rb.velocity.y < -0.01)
         {
+            isFalling = true;
             animator.SetFloat("X", 0);
             animator.SetFloat("Y", -1);
         }
@@ -39,6 +45,11 @@ public class PlayerAnimationHandler : MonoBehaviour
             animator.SetFloat("X", 0);
             animator.SetFloat("Y", 0);
         }
+
+        if(rb.velocity.y == 0)
+        {
+            isFalling = false;
+        }
     }
 
     private IEnumerator JumpLogic()
@@ -46,9 +57,10 @@ public class PlayerAnimationHandler : MonoBehaviour
         yield return null;
         while (rb.velocity.y > 0)
         {
+            isFalling = false;
             Debug.Log("Jump");
-            animator.SetFloat("X", 1);
-            animator.SetFloat("Y", 0);
+            animator.SetFloat("X", 0);
+            animator.SetFloat("Y", 1);
             yield return null;
 
         }
