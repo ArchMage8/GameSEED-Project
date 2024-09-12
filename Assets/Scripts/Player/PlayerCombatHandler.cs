@@ -8,7 +8,7 @@ public class PlayerCombatHandler : MonoBehaviour
     public int damageDealt = 1;
 
     [Header("Animation and Movement")]
-    public Animator playerAnimator;
+    public Animator animator;
     public GameObject MainObject;
 
     private bool canAttack = true;
@@ -29,20 +29,22 @@ public class PlayerCombatHandler : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
+        Debug.Log(isAttacking);
     }
 
     private IEnumerator Attack()
     {
         canAttack = false;
         isAttacking = true;
-        playerAnimator.SetTrigger("Attack");
 
+        Debug.Log(isAttacking + "a");
         playerMovement.canMove = false;
         playerMovement.StopMovement();
+        animator.SetTrigger("Attack");
 
         if (!playerMovement.isGrounded)
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = 0.5f;
         }
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
@@ -59,14 +61,32 @@ public class PlayerCombatHandler : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(playerAnimator.GetCurrentAnimatorStateInfo(0).length);
-        isAttacking = false;
+        yield return new WaitForSeconds(0.5f);
+        if (playerMovement.isGrounded)
+        
+        {
+
+            isAttacking = false;
+            canAttack = true;
+            playerMovement.canMove = true;
+        }
+
+        else
+        {
+            rb.gravityScale = 1;
+            StartCoroutine(MidAirHandler());
+        }
+        
+        
+    }
+
+    private IEnumerator MidAirHandler()
+    {
+        while (!playerMovement.isGrounded)
+        {
+            yield return null; 
+        }
         canAttack = true;
         playerMovement.canMove = true;
-
-        if (!playerMovement.isGrounded)
-        {
-            rb.gravityScale = 0;
-        }
     }
 }

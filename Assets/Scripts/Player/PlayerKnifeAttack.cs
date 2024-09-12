@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerKnifeAttack : MonoBehaviour
 {
     [Header("Attack Settings")]
-    public float rayLength = 5f;
+    //public float rayLength = 5f;
     public int damageDealt = 1;
     public float generationDelay = 0.5f;
 
@@ -44,22 +44,26 @@ public class PlayerKnifeAttack : MonoBehaviour
 
         playerMovement.canMove = false;
 
-        if (!playerMovement.isGrounded)
-        {
-            rb.gravityScale = 1;
-        }
+        playerMovement.StopMovement();
 
         Throw();
 
-        yield return new WaitForSeconds(playerAnimator.GetCurrentAnimatorStateInfo(0).length);
-        isAttacking = false;
-        canAttack = true;
-        playerMovement.canMove = true;
+        yield return new WaitForSeconds(0.5f);
+        if (playerMovement.isGrounded)
 
-        if (!playerMovement.isGrounded)
         {
-            rb.gravityScale = 0;
+
+            isAttacking = false;
+            canAttack = true;
+            playerMovement.canMove = true;
         }
+
+        else
+        {
+            rb.gravityScale = 1;
+            StartCoroutine(MidAirHandler());
+        }
+
     }
 
     private void Throw()
@@ -71,10 +75,20 @@ public class PlayerKnifeAttack : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
-        Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        Vector2 direction = MainObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction * projectileSpeed;
 
         yield return new WaitForSeconds(generationDelay);
+    }
+
+    private IEnumerator MidAirHandler()
+    {
+        while (!playerMovement.isGrounded)
+        {
+            yield return null;
+        }
+        canAttack = true;
+        playerMovement.canMove = true;
     }
 }
