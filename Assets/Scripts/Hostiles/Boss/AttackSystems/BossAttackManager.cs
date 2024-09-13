@@ -9,6 +9,7 @@ public class BossAttackManager : MonoBehaviour
     public BossAttackSpiral spiralAttack;
     public BossAttackStar starAttack;
     public BossAttackTrack trackAttack;
+    public Animator animator;
 
     [Header("Timing Settings")]
     public float delayBetweenAttacks = 2f;
@@ -43,32 +44,48 @@ public class BossAttackManager : MonoBehaviour
     {
         isCycling = true;
         
-        yield return new WaitForSeconds(delayBetweenAttacks);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
+        AnimationHandler(1,0);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Spiral Attack
         spiralAttack.SpiralAttack();
         yield return new WaitUntil(() => spiralAttack.isAttackComplete);
 
         // Delay between attacks
-        yield return new WaitForSeconds(delayBetweenAttacks);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
+        AnimationHandler(0, 1);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Star Attack
         starAttack.StarAttack();
         yield return new WaitUntil(() => starAttack.isAttackComplete);
 
         // Delay between attacks
-        yield return new WaitForSeconds(delayBetweenAttacks);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
+        AnimationHandler(1, 1);
+        yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Track Attack
         trackAttack.TrackAttack();
         yield return new WaitUntil(() => trackAttack.isAttackComplete);
 
+        AnimationHandler(0, 0);
         // Delay after full cycle
         yield return new WaitForSeconds(delayAfterCycle);
+        
+        
 
         if (canAttack)
         {
             StartCoroutine(AttackCycle());
         }
     }
+
+    private void AnimationHandler(int x, int y)
+    {
+        animator.SetFloat("X",x);
+        animator.SetFloat("Y",y);
+    }
+
 }
