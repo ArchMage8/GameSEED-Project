@@ -23,9 +23,9 @@ public class BossAttackTrack : MonoBehaviour
 
         Vector2 direction = target.transform.position.x > transform.position.x ? Vector2.right : Vector2.left;
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 11; i++)
         {
-            GameObject projectile = Instantiate(objectToSpawn, transform.position + new Vector3(0, i, 0), Quaternion.identity);
+            GameObject projectile = Instantiate(objectToSpawn, transform.position + new Vector3(0, i-5, 0), Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().velocity = direction * moveSpeed;
         }
 

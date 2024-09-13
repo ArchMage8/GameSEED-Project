@@ -56775,7 +56775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588073272923333176, guid: 738e5e59b64148541946225f34543bd6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8588073273105991693, guid: 738e5e59b64148541946225f34543bd6, type: 3}
       propertyPath: projectilePrefab
@@ -56783,7 +56783,7 @@ PrefabInstance:
       objectReference: {fileID: 3464670758921079265, guid: 7ff3626613633ea44b5f0bb69267932b, type: 3}
     - target: {fileID: 8588073273105991697, guid: 738e5e59b64148541946225f34543bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738e5e59b64148541946225f34543bd6, type: 3}
