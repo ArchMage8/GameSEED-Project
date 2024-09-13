@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 069835f19dac5ec4292e65aa1aef2879
+guid: cabab984721bc7a4f8cfcfae09f13987
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeleeWalk_0
+      name: Ranged2Shoot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c599b7d9197a145a8acd4261648631
-      internalID: 1889603686
+      spriteID: e30ddd9078cdf3d43bee73172d527fb5
+      internalID: 687794260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeWalk_1
+      name: Ranged2Shoot_1
       rect:
         serializedVersion: 2
         x: 1000
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d8119782ca07b842b571d9ace824496
-      internalID: 1387824139
+      spriteID: 37bf8ae0198b1964085af51cc0b986cd
+      internalID: 2141412922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeWalk_2
+      name: Ranged2Shoot_2
       rect:
         serializedVersion: 2
         x: 2000
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9298a0fbbd7386149a8eeaa35f3a649d
-      internalID: 223002022
+      spriteID: cb216102cd8cd054a86b33e6754e7767
+      internalID: -724117115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeWalk_3
+      name: Ranged2Shoot_3
       rect:
         serializedVersion: 2
         x: 3000
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb3c7b51b4469644cbd2fc960f3cc26c
-      internalID: 2132882571
+      spriteID: a428c84751db0b94e99de75e761da29d
+      internalID: -2092227690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeWalk_4
+      name: Ranged2Shoot_4
       rect:
         serializedVersion: 2
         x: 4000
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b002da030bb82bd448e0aac6b4854ce2
-      internalID: -1133426816
+      spriteID: c0fc55518f840e14f833b52a1479a927
+      internalID: -68240354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeWalk_5
+      name: Ranged2Shoot_5
       rect:
         serializedVersion: 2
         x: 5000
@@ -248,50 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c85ab0c6f3b8374da0a6002747c623b
-      internalID: 1997689136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeWalk_6
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8ee08d37543ac74b9eee53d54f6070d
-      internalID: 1341958486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeWalk_7
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be8cd2b76a456bf49a9bddee986e2ef7
-      internalID: -1060583451
+      spriteID: 80068e2d425f9474aba03b845121fc84
+      internalID: -1097524165
       vertices: []
       indices: 
       edges: []
@@ -307,14 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MeleeWalk_1: 1387824139
-      MeleeWalk_0: 1889603686
-      MeleeWalk_5: 1997689136
-      MeleeWalk_6: 1341958486
-      MeleeWalk_7: -1060583451
-      MeleeWalk_2: 223002022
-      MeleeWalk_4: -1133426816
-      MeleeWalk_3: 2132882571
+      Ranged2Shoot_2: -724117115
+      Ranged2Shoot_5: -1097524165
+      Ranged2Shoot_3: -2092227690
+      Ranged2Shoot_1: 2141412922
+      Ranged2Shoot_4: -68240354
+      Ranged2Shoot_0: 687794260
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
