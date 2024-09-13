@@ -7,6 +7,7 @@ public class NormalShooter : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private float delayBetweenShots = 1f;
     [SerializeField] private int direction = 0;
+    [SerializeField] private Animator animator;
 
     private EnemyCombatHandler enemyCombatHandler;
 
@@ -31,6 +32,7 @@ public class NormalShooter : MonoBehaviour
 
         if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
         {
+            animator.SetTrigger("Shoot");
             ShootProjectile();
             timeSinceLastShot = 0f;
         }
