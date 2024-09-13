@@ -45,32 +45,32 @@ public class BossAttackManager : MonoBehaviour
         isCycling = true;
         
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
-        AnimationHandler(1,0);
+        animator.SetBool("Spiral", true);
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Spiral Attack
         spiralAttack.SpiralAttack();
         yield return new WaitUntil(() => spiralAttack.isAttackComplete);
-
+        animator.SetBool("Spiral", false);
         // Delay between attacks
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
-        AnimationHandler(0, 1);
+        animator.SetBool("Star", true);
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Star Attack
         starAttack.StarAttack();
         yield return new WaitUntil(() => starAttack.isAttackComplete);
-
+        animator.SetBool("Star", false);
         // Delay between attacks
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
-        AnimationHandler(1, 1);
+        animator.SetBool("Track", true);
         yield return new WaitForSeconds(delayBetweenAttacks / 2);
 
         // Track Attack
         trackAttack.TrackAttack();
         yield return new WaitUntil(() => trackAttack.isAttackComplete);
-
-        AnimationHandler(0, 0);
+        animator.SetBool("Track", false);
+       
         // Delay after full cycle
         yield return new WaitForSeconds(delayAfterCycle);
         
@@ -82,10 +82,6 @@ public class BossAttackManager : MonoBehaviour
         }
     }
 
-    private void AnimationHandler(int x, int y)
-    {
-        animator.SetFloat("X",x);
-        animator.SetFloat("Y",y);
-    }
+   
 
 }

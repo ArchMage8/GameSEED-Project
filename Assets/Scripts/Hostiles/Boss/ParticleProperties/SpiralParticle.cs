@@ -17,7 +17,6 @@ public class SpiralParticle : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Orb Position: " + transform.position);
 
         float radius = radiusIncrease * angle;
         angle += speed * Time.deltaTime;
