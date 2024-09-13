@@ -229,8 +229,8 @@ MonoBehaviour:
   spiralAttack: {fileID: 451189295}
   starAttack: {fileID: 555072364}
   trackAttack: {fileID: 772944054}
-  delayBetweenAttacks: 2
-  delayAfterCycle: 5
+  delayBetweenAttacks: 1
+  delayAfterCycle: 1
 --- !u!212 &238469004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,8 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3340852020629904355, guid: e8b9628784e6d6f48a51366e43837f7e, type: 3}
-  maxParticles: 9
-  spawnDelay: 1
+  maxParticles: 90
+  spawnDelay: 0.1
   isAttackComplete: 0
 --- !u!1 &555072362
 GameObject:
@@ -395,9 +395,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToShoot: {fileID: 3340852020629904355, guid: 7f14a7c85d68edf4da91f2c385b4f8cb, type: 3}
-  maxRounds: 9
-  shootDelay: 0.5
-  moveSpeed: 1
+  maxRounds: 15
+  shootDelay: 0.2
+  moveSpeed: 3
   isAttackComplete: 0
 --- !u!1 &772944052
 GameObject:
@@ -445,8 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3340852020629904355, guid: 7f14a7c85d68edf4da91f2c385b4f8cb, type: 3}
   target: {fileID: 1841059482}
-  delayBeforeAttack: 3
-  moveSpeed: 1
+  delayBeforeAttack: 0.5
+  moveSpeed: 3
   isAttackComplete: 0
 --- !u!1 &1274316765
 GameObject:
@@ -590,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841059482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.77, y: -0.28, z: 0}
+  m_LocalPosition: {x: 6.24, y: -3.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
