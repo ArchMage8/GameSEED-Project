@@ -55,15 +55,17 @@ public class BossAttackManager : MonoBehaviour
         spiralAttack.SpiralAttack();
         yield return new WaitUntil(() => spiralAttack.isAttackComplete);
         animator.SetBool("Spiral", false);
+
         // Delay between attacks
-        yield return new WaitForSeconds(delayStarAttack);
-        animator.SetBool("Star", true);
         yield return new WaitForSeconds(delayBeforeAnimation);
+        animator.SetBool("Star", true);
+        yield return new WaitForSeconds(delayStarAttack);
 
         // Star Attack
         starAttack.StarAttack();
         yield return new WaitUntil(() => starAttack.isAttackComplete);
         animator.SetBool("Star", false);
+
         // Delay between attacks
         yield return new WaitForSeconds(delayBeforeAnimation);
         animator.SetBool("Track", true);
