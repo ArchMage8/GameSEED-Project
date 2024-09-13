@@ -9,6 +9,7 @@ public class ArcShooter : MonoBehaviour
     [SerializeField] private float launchSpeed = 10f;
     [SerializeField] private float launchAngle = 45f; // Angle in degrees
     [SerializeField] private float delayBetweenShots = 2f;
+    [SerializeField] private Animator animator;
 
     private EnemyCombatHandler enemyCombatHandler;
 
@@ -33,6 +34,7 @@ public class ArcShooter : MonoBehaviour
 
         if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
         {
+            animator.SetTrigger("Shoot");
             LaunchProjectile();
             timeSinceLastShot = 0f;
         }

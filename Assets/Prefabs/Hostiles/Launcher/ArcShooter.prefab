@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2173749479648140286}
   - component: {fileID: 2173749479648140282}
   - component: {fileID: 2173749479648140287}
+  - component: {fileID: -3925933203552119210}
   m_Layer: 6
   m_Name: ArcShooter
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   launchSpeed: 10
   launchAngle: 115
   delayBetweenShots: 2
+  animator: {fileID: -3925933203552119210}
 --- !u!114 &2173749479648140287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +147,27 @@ MonoBehaviour:
   CanMove: 1
   stunDuration: 3
   health: 10
+  isBoss: 0
+  healthBoost: {fileID: 0}
+  healthDropChance: 50
+  flickerRate: 0.1
+--- !u!95 &-3925933203552119210
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173749479648140283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 074023a93beeb9e4197780ab6639c3dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

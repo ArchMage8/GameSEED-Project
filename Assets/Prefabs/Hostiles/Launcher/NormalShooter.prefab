@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7425573248238419551}
   - component: {fileID: 7425573248238419550}
   - component: {fileID: 7425573248238419548}
+  - component: {fileID: 9177066352048826952}
   m_Layer: 6
   m_Name: NormalShooter
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   speed: 4
   delayBetweenShots: 3
   direction: 180
+  animator: {fileID: 0}
 --- !u!114 &7425573248238419548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +147,27 @@ MonoBehaviour:
   CanMove: 1
   stunDuration: 3
   health: 10
+  isBoss: 0
+  healthBoost: {fileID: 0}
+  healthDropChance: 50
+  flickerRate: 0.1
+--- !u!95 &9177066352048826952
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7425573248238419539}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
