@@ -70,6 +70,9 @@ TagManager:
   - name: Particles
     uniqueID: 937862123
     locked: 0
+  - name: Boss
+    uniqueID: 951493559
+    locked: 0
   - name: Foreground
     uniqueID: 2167238333
     locked: 0
