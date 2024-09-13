@@ -7,7 +7,7 @@ public class EnemyCombatHandler : MonoBehaviour
     public bool CanAttack;
     public bool CanMove;
     public float stunDuration;
-    private float health;
+    public float health;
 
     [Header("Boss Settings")]
     public bool isBoss;

@@ -52,6 +52,12 @@ TagManager:
   - name: EnvironmentBack
     uniqueID: 3015727777
     locked: 0
+  - name: EnemyProjectiles
+    uniqueID: 1609626371
+    locked: 0
+  - name: Enemy
+    uniqueID: 2974591265
+    locked: 0
   - name: Player
     uniqueID: 281167803
     locked: 0
