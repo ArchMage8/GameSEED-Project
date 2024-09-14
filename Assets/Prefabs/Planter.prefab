@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7418147430724898867}
   - component: {fileID: 7418147430724898864}
   - component: {fileID: 7418147430724898865}
+  - component: {fileID: 6815348002104998699}
   m_Layer: 0
   m_Name: Grown
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   targetSickle: 0
   targetLasso: 0
   targetKnife: 1
+  MainObject: {fileID: 7418147432233929109}
 --- !u!212 &7418147430724898865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,6 +102,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6815348002104998699
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418147430724898866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.859375, y: 1.5390625}
+    newSize: {x: 0.6171875, y: 1.3671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.859375, y: 1.5390625}
+  m_EdgeRadius: 0
 --- !u!1 &7418147430789760284
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +469,7 @@ GameObject:
   - component: {fileID: 7418147431908068514}
   - component: {fileID: 7418147431908068515}
   - component: {fileID: 7418147431908068512}
+  - component: {fileID: 8603006923286298900}
   m_Layer: 0
   m_Name: Grown
   m_TagString: Untagged
@@ -478,6 +507,7 @@ MonoBehaviour:
   targetSickle: 0
   targetLasso: 1
   targetKnife: 0
+  MainObject: {fileID: 7418147432233929109}
 --- !u!212 &7418147431908068512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -530,6 +560,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8603006923286298900
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418147431908068541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4375, y: 2.2734375}
+    newSize: {x: 0.6171875, y: 1.3671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4375, y: 2.2734375}
+  m_EdgeRadius: 0
 --- !u!1 &7418147431911802844
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +806,7 @@ GameObject:
   - component: {fileID: 7418147432306553391}
   - component: {fileID: 7418147432306553388}
   - component: {fileID: 7418147432306553389}
+  - component: {fileID: 1846812462519776499}
   m_Layer: 0
   m_Name: Grown
   m_TagString: Untagged
@@ -787,6 +844,7 @@ MonoBehaviour:
   targetSickle: 1
   targetLasso: 0
   targetKnife: 0
+  MainObject: {fileID: 7418147432233929109}
 --- !u!212 &7418147432306553389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -839,6 +897,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1846812462519776499
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418147432306553390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6171875, y: 1.3671875}
+    newSize: {x: 0.6171875, y: 1.3671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6171875, y: 1.3671875}
+  m_EdgeRadius: 0
 --- !u!1 &7418147432447560051
 GameObject:
   m_ObjectHideFlags: 0
