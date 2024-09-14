@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class BossAttackManager : MonoBehaviour
 {
-    [Header("Attack System")]
+
+    [Header("Target")]
+    public GameObject target;
+
+    
     public PlayerDetector playerDetector;
     public BossAttackSpiral spiralAttack;
     public BossAttackStar starAttack;
@@ -53,7 +57,8 @@ public class BossAttackManager : MonoBehaviour
 
         // Spiral Attack
         spiralAttack.SpiralAttack();
-        yield return new WaitUntil(() => spiralAttack.isAttackComplete);
+        //yield return new WaitUntil(() => spiralAttack.isAttackComplete);
+        yield return new WaitForSeconds(6f);
         animator.SetBool("Spiral", false);
 
         // Delay between attacks
@@ -68,14 +73,50 @@ public class BossAttackManager : MonoBehaviour
 
         // Delay between attacks
         yield return new WaitForSeconds(delayBeforeAnimation);
-        animator.SetBool("Track", true);
+
+        // Hans cursed code starts here
+        // Check if Target (player) is on the left or right, then play corresponding animation.
+        if(target.transform.position.x >= transform.position.x){
+            Debug.Log("Play Animation Shoot TO RIGHT");
+            animator.SetBool("TrackLeft", true);
+        }else{
+            Debug.Log("Play Animation Shoot TO LEFT");
+            animator.SetBool("TrackRight", true);
+        }
+        //Hans cursed code ends here
+        
         yield return new WaitForSeconds(delayTrackAttack);
 
         // Track Attack
         trackAttack.TrackAttack();
-        yield return new WaitUntil(() => trackAttack.isAttackComplete);
-        animator.SetBool("Track", false);
+        //yield return new WaitUntil(() => trackAttack.isAttackComplete);
+        yield return new WaitForSeconds(4f);
+        animator.SetBool("TrackRight", false);
+        animator.SetBool("TrackLeft", false);
        
+        // Hans cursed code starts here
+
+        //Dual beam attack
+        Debug.Log("Dual Beam START");
+        yield return new WaitForSeconds(delayBeforeAnimation);
+        animator.SetBool("DualBeam", true);
+        yield return new WaitForSeconds(15f);
+        animator.SetBool("DualBeam", false);
+        Debug.Log("Dual Beam FINISH");
+
+        //Seed laser attack
+        Debug.Log("Seed Laser START");
+        yield return new WaitForSeconds(delayBeforeAnimation);
+        animator.SetBool("SeedLaser", true);
+        yield return new WaitForSeconds(7.5f);
+        animator.SetBool("SeedLaser", false);
+        Debug.Log("Seed Laser FINISH");
+
+
+
+
+        //Hans cursed code ends here
+
         // Delay after full cycle
         yield return new WaitForSeconds(delayAfterCycle);
         

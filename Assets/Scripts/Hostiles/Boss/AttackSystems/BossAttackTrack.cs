@@ -8,6 +8,8 @@ public class BossAttackTrack : MonoBehaviour
     public float delayBeforeAttack;
     public float moveSpeed;
 
+    private float hanFunnyVariableThatIDontKNowWhatToCall;
+
     [HideInInspector] public bool isAttackComplete;
 
     public void TrackAttack()
@@ -25,7 +27,15 @@ public class BossAttackTrack : MonoBehaviour
 
         for (int i = 0; i < 11; i++)
         {
-            GameObject projectile = Instantiate(objectToSpawn, transform.position + new Vector3(0, i-5, 0), Quaternion.identity);
+            //Hans cursed code starts here
+                if(target.transform.position.x >= transform.position.x){
+                hanFunnyVariableThatIDontKNowWhatToCall = -18;
+            }else{
+                hanFunnyVariableThatIDontKNowWhatToCall = 18;
+            }
+            //Hans cursed code ends here
+
+            GameObject projectile = Instantiate(objectToSpawn, transform.position + new Vector3(hanFunnyVariableThatIDontKNowWhatToCall, i-5, 0), Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().velocity = direction * moveSpeed;
         }
 
