@@ -53,6 +53,8 @@ public class BlockMain : MonoBehaviour
             {
                 player.transform.parent = null;
                 player = null;
+                PlayerMovement temp = player.GetComponentInParent<PlayerMovement>();
+                temp.speed /= playerSpeedScale;
             }
         }
     }
