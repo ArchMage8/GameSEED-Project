@@ -6,6 +6,7 @@ public class PlayerKnifeAttack : MonoBehaviour
     [Header("Attack Settings")]
     public int damageDealt = 1;
     public float generationDelay = 0.5f;
+    private float TempGravity;
 
     [Header("Projectile Settings")]
     public GameObject projectilePrefab;
@@ -20,11 +21,14 @@ public class PlayerKnifeAttack : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private Rigidbody2D rb;
+    private float initialGravity;
 
     private void Start()
     {
         playerMovement = MainObject.GetComponent<PlayerMovement>();
         rb = MainObject.GetComponent<Rigidbody2D>();
+
+        initialGravity = rb.gravityScale;
     }
 
     private void Update()
@@ -41,6 +45,11 @@ public class PlayerKnifeAttack : MonoBehaviour
         isAttacking = true;
         playerAnimator.SetTrigger("Attack");
 
+        if (!playerMovement.isGrounded)
+        {
+            rb.gravityScale = TempGravity;
+        }
+
         playerMovement.canMove = false;
         playerMovement.StopMovement();
 
@@ -55,7 +64,7 @@ public class PlayerKnifeAttack : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = initialGravity;
             StartCoroutine(MidAirHandler());
         }
     }

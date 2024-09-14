@@ -35,13 +35,16 @@ public class PlayerAnimationHandler : MonoBehaviour
             // Walk
             if (!isFalling)
             {
-                animator.SetFloat("X", 1);
-                animator.SetFloat("Y", 0);
+               
+                    animator.SetFloat("X", 1);
+                    animator.SetFloat("Y", 0);
+                
             }
         }
 
         else if (rb.velocity.y < -0.01)
         {
+            //Debug.Log("falling");
             isFalling = true;
             animator.SetFloat("X", 0);
             animator.SetFloat("Y", -1);
@@ -75,5 +78,12 @@ public class PlayerAnimationHandler : MonoBehaviour
 
         // Once the jump is finished, reset the isJumping flag
         isJumping = false;
+    }
+
+    public void ForceIdle()
+    {
+        Debug.Log("Bnn");
+        animator.SetFloat("X", 0);
+        animator.SetFloat("Y", 0);
     }
 }

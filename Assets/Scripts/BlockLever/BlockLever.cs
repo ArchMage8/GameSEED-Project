@@ -25,7 +25,7 @@ public class BlockLever : MonoBehaviour
         }
         else if (other.CompareTag("Knife"))
         {
-            Debug.Log("T3est");
+            //Debug.Log("T3est");
             block.MoveBlock();
         }
     }

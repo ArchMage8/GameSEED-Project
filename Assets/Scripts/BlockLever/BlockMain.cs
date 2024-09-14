@@ -19,10 +19,43 @@ public class BlockMain : MonoBehaviour
     private bool isOpen = false;
     private GameObject player;
 
+    private float initialPlayerSpeed;
+    private bool isOnPlatform = false;
+
+    //Random Privates
+    private PlayerMovement playerMovement;
+    private PlayerAnimationHandler animationHandler;
 
     private void Start()
     {
         originalPosition = transform.position;
+    }
+
+
+
+    private void Update()
+    {
+        //Handle the player being on the block
+        if (player != null)
+        {
+            playerMovement = player.GetComponent<PlayerMovement>();
+            animationHandler = player.GetComponent<PlayerAnimationHandler>();
+
+            initialPlayerSpeed = playerMovement.speed;
+
+            HandlePlayer();
+        }
+
+        else
+        {
+            playerMovement = null;
+            animationHandler = null;
+
+            isOnPlatform = false;
+        } 
+
+
+       //If the player falls on the block it needs to become idle
     }
 
     public void MoveBlock()
@@ -38,10 +71,7 @@ public class BlockMain : MonoBehaviour
         {
             player = collision.gameObject;
             player.transform.parent = transform;
-
-            PlayerMovement temp = player.GetComponentInParent<PlayerMovement>();
-            temp.speed *= playerSpeedScale;
-            //Speed up logic
+          
         }
     }
 
@@ -49,12 +79,13 @@ public class BlockMain : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            player = collision.gameObject;
+
             if (player != null)
             {
                 player.transform.parent = null;
                 player = null;
-                PlayerMovement temp = player.GetComponentInParent<PlayerMovement>();
-                temp.speed /= playerSpeedScale;
+                
             }
         }
     }
@@ -64,6 +95,7 @@ public class BlockMain : MonoBehaviour
         isMoving = true;
 
         Vector3 targetPosition = isOpen ? originalPosition : destination.position;
+        UpdateLevers();
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -84,6 +116,20 @@ public class BlockMain : MonoBehaviour
         foreach (GameObject lever in levers)
         {
             lever.GetComponent<SpriteRenderer>().sprite = newSprite;
+        }
+    }
+
+    private void HandlePlayer()
+    {
+        if(isOnPlatform && isMoving)
+        {
+            playerMovement.speed = initialPlayerSpeed * playerSpeedScale;
+        }
+
+        if(player.GetComponent<Rigidbody2D>().velocity.y == 0 && isOnPlatform)
+        {
+            
+           animationHandler.ForceIdle();
         }
     }
 }

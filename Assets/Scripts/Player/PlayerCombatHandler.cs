@@ -6,6 +6,7 @@ public class PlayerCombatHandler : MonoBehaviour
     [Header("Attack Settings")]
     public float rayLength = 5f;
     public int damageDealt = 1;
+    private float TempGravity;
 
     [Header("Animation and Movement")]
     public Animator animator;
@@ -17,10 +18,15 @@ public class PlayerCombatHandler : MonoBehaviour
     private PlayerMovement playerMovement;
     private Rigidbody2D rb;
 
+    private float initialGravity;
+    
+
     private void Start()
     {
         playerMovement = MainObject.GetComponent<PlayerMovement>();
         rb = MainObject.GetComponent<Rigidbody2D>();
+
+        initialGravity = rb.gravityScale;
     }
 
     private void Update()
@@ -44,7 +50,7 @@ public class PlayerCombatHandler : MonoBehaviour
 
         if (!playerMovement.isGrounded)
         {
-            rb.gravityScale = 0.5f;
+            rb.gravityScale = TempGravity;
         }
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
@@ -73,7 +79,7 @@ public class PlayerCombatHandler : MonoBehaviour
 
         else
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = initialGravity;
             StartCoroutine(MidAirHandler());
         }
         
