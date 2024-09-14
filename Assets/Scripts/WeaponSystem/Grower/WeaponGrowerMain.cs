@@ -12,6 +12,9 @@ public class WeaponGrowerMain : MonoBehaviour
     public GameObject lassoChild;
     public GameObject knifeChild;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+
     private SpriteRenderer spriteRenderer;
 
     private bool playerInRange;
@@ -62,6 +65,7 @@ public class WeaponGrowerMain : MonoBehaviour
     private void PlantWeapon(GameObject weaponChild)
     {
         weaponChild.SetActive(true);
+        SFXManager.instance.PlaySFX(SFXClip);
         canPlant = false;
         //ResetGrower();
     }

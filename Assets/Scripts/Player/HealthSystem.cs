@@ -20,6 +20,10 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private float flickerRate = 0.5f;
     [SerializeField] private GameObject DeathCanvas;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+  
+
     private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
     private bool Invincible;
@@ -66,6 +70,7 @@ public class HealthSystem : MonoBehaviour
         if (!Invincible)
         {
             Health -= damage;
+            SFXManager.instance.PlaySFX(SFXClip);
             StartCoroutine(InvincibleState());
             if (Health <= 0)
             {
@@ -135,4 +140,6 @@ public class HealthSystem : MonoBehaviour
         DeathCanvas.SetActive(true);
         playerMovement.canMove = false;
     }
+
+
 }

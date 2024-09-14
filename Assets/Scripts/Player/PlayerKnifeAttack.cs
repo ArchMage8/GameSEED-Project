@@ -16,6 +16,11 @@ public class PlayerKnifeAttack : MonoBehaviour
     public Animator playerAnimator;
     public GameObject MainObject;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip1;
+    public AudioClip SFXClip2;
+    public AudioClip SFXClip3;
+
     private bool canAttack = true;
     public bool isAttacking { get; private set; }
 
@@ -71,6 +76,7 @@ public class PlayerKnifeAttack : MonoBehaviour
 
     private void Throw()
     {
+        AudioRandomizer();
         StartCoroutine(GenerateProjectile());
     }
 
@@ -99,5 +105,23 @@ public class PlayerKnifeAttack : MonoBehaviour
         }
         canAttack = true;
         playerMovement.canMove = true;
+    }
+
+    private void AudioRandomizer()
+    {
+        int randomNumber = Random.Range(1, 4);
+
+        if (randomNumber == 1)
+        {
+            SFXManager.instance.PlaySFX(SFXClip1);
+        }
+        else if (randomNumber == 2)
+        {
+            SFXManager.instance.PlaySFX(SFXClip2);
+        }
+        else if (randomNumber == 3)
+        {
+            SFXManager.instance.PlaySFX(SFXClip3);
+        }
     }
 }

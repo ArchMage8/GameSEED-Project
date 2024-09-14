@@ -12,6 +12,11 @@ public class PlayerCombatHandler : MonoBehaviour
     public Animator animator;
     public GameObject MainObject;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip1;
+    public AudioClip SFXClip2;
+    public AudioClip SFXClip3;
+
     private bool canAttack = true;
     public bool isAttacking { get; private set; }
 
@@ -54,6 +59,7 @@ public class PlayerCombatHandler : MonoBehaviour
         }
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
+        AudioRandomizer();
 
         foreach (var hit in hits)
         {
@@ -94,5 +100,23 @@ public class PlayerCombatHandler : MonoBehaviour
         }
         canAttack = true;
         playerMovement.canMove = true;
+    }
+
+    private void AudioRandomizer()
+    {
+        int randomNumber = Random.Range(1, 4);
+
+        if (randomNumber == 1)
+        {
+            SFXManager.instance.PlaySFX(SFXClip1);
+        }
+        else if (randomNumber == 2)
+        {
+            SFXManager.instance.PlaySFX(SFXClip2);
+        }
+        else if (randomNumber == 3)
+        {
+            SFXManager.instance.PlaySFX(SFXClip3);
+        }
     }
 }

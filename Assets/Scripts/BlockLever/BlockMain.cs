@@ -11,11 +11,15 @@ public class BlockMain : MonoBehaviour
 
     [Header("Movement Settings")]
     public float moveSpeed = 1f;
-    public float playerSpeedScale = 3f;
+
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+    
+
 
     [Header("State Variables")]
     private Vector3 originalPosition;
-    private bool isMoving = false;
+    [HideInInspector] public bool isMoving = false;
     private bool isOpen = false;
     private GameObject player;
 
@@ -39,10 +43,10 @@ public class BlockMain : MonoBehaviour
         if (player != null)
         {
             playerMovement = player.GetComponent<PlayerMovement>();
-            animationHandler = player.GetComponent<PlayerAnimationHandler>();
+            
 
             initialPlayerSpeed = playerMovement.speed;
-
+            isOnPlatform = true;
             HandlePlayer();
         }
 
@@ -60,9 +64,15 @@ public class BlockMain : MonoBehaviour
 
     public void MoveBlock()
     {
-        if (isMoving) return;
-
-        StartCoroutine(Move());
+        if (isMoving)
+        {
+            return;
+        }
+        else
+        {
+            SFXManager.instance.PlaySFX(SFXClip);
+            StartCoroutine(Move());
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -71,6 +81,13 @@ public class BlockMain : MonoBehaviour
         {
             player = collision.gameObject;
             player.transform.parent = transform;
+
+            animationHandler = player.GetComponentInChildren<PlayerAnimationHandler>();
+
+            animationHandler.animator.SetFloat("X", 0);
+            animationHandler.animator.SetFloat("Y", 0);
+
+            Debug.Log("Player Detect");
           
         }
     }
@@ -80,6 +97,7 @@ public class BlockMain : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject;
+            player.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Interpolate;
 
             if (player != null)
             {
@@ -105,7 +123,7 @@ public class BlockMain : MonoBehaviour
         transform.position = targetPosition;
         isOpen = !isOpen;
 
-        UpdateLevers();
+        //UpdateLevers();
 
         isMoving = false;
     }
@@ -121,15 +139,16 @@ public class BlockMain : MonoBehaviour
 
     private void HandlePlayer()
     {
-        if(isOnPlatform && isMoving)
-        {
-            playerMovement.speed = initialPlayerSpeed * playerSpeedScale;
-        }
-
-        if(player.GetComponent<Rigidbody2D>().velocity.y == 0 && isOnPlatform)
-        {
+            if (isOnPlatform && isMoving == true)
+            {
+                //Debug.Log("Test");
+                player.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.None;
+            }
             
-           animationHandler.ForceIdle();
+            if(player.GetComponent<Rigidbody2D>().velocity.x == 0)
+            {
+            animationHandler.animator.SetFloat("X", 0);
+            animationHandler.animator.SetFloat("Y", 0);
         }
     }
 }

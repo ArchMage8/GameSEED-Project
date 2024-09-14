@@ -8,6 +8,11 @@ public class TimeTrigger : MonoBehaviour
     [SerializeField] private float animationStartWait = 2f;
     [SerializeField] private float animationEndWait = 2f;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClipStart;
+    public AudioClip SFXClipEnd;
+    
+
     private bool playerInRange;
     private bool inProgress = false;
 
@@ -52,6 +57,8 @@ public class TimeTrigger : MonoBehaviour
         Checkpoint.instance.UpdateCheckpoint(transform);
         Daycanvas.SetActive(true);
 
+        SFXManager.instance.PlaySFX(SFXClipStart);
+
         yield return new WaitForSeconds(animationStartWait);
         TimeCycle.Instance.IncreaseTimeValue();
         StartCoroutine(DisableCanvasDay());
@@ -62,6 +69,7 @@ public class TimeTrigger : MonoBehaviour
 
     private IEnumerator DisableCanvasDay()
     {
+        SFXManager.instance.PlaySFX(SFXClipEnd);
         yield return new WaitForSeconds(animationEndWait);
         Daycanvas.SetActive(false);
     } 
@@ -73,6 +81,7 @@ public class TimeTrigger : MonoBehaviour
         Checkpoint.instance.UpdateCheckpoint(transform);
         Nightcanvas.SetActive(true);
 
+        SFXManager.instance.PlaySFX(SFXClipStart);
         yield return new WaitForSeconds(animationStartWait);
 
         TimeCycle.Instance.IncreaseTimeValue();
@@ -84,6 +93,7 @@ public class TimeTrigger : MonoBehaviour
 
     private IEnumerator DisableCanvasNight()
     {
+        SFXManager.instance.PlaySFX(SFXClipEnd);
         yield return new WaitForSeconds(animationEndWait);
         Nightcanvas.SetActive(false);
     }

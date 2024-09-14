@@ -20,7 +20,14 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool canMove = true;
 
-    public bool isMoving { get; private set; }
+    public bool isMoving;
+
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+
+    
+
+    private bool isFalling;
 
     private void Start()
     {
@@ -29,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
+        FallHandler();
+
         if (TimeCycle.Instance.isChanging == true)
         {
             canMove = false;
@@ -88,5 +96,30 @@ public class PlayerMovement : MonoBehaviour
         horizonal = 0f;
         rb.velocity = Vector2.zero;
         isMoving = false;
+    }
+
+    private IEnumerator fallSound()
+    {
+        while (isFalling)
+        {
+            yield return null;
+        }
+        SFXManager.instance.PlaySFX(SFXClip);
+    }
+
+    private void FallHandler()
+    {
+        if (rb.velocity.y < 0)
+        {
+            //falling logic
+            StartCoroutine(fallSound());
+            isFalling = true;
+
+        }
+
+        if (isGrounded)
+        {
+            isFalling = false;
+        }
     }
 }

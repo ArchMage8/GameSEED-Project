@@ -19,6 +19,10 @@ public class Swing_Player : MonoBehaviour
     [Header("Line Settings")]
     [SerializeField] private float lineAppearDuration = 0f; // Time for the line to appear
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+ 
+
     private Transform detectorTransform;
 
     private void Start()
@@ -56,6 +60,8 @@ public class Swing_Player : MonoBehaviour
 
     private void StartSwing()
     {
+        SFXManager.instance.PlaySFX(SFXClip);
+
         distanceJoint.enabled = true;
         playerMovement.enabled = false;
         ApplySwingForce();

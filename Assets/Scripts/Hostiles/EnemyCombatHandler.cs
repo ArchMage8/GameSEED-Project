@@ -21,6 +21,11 @@ public class EnemyCombatHandler : MonoBehaviour
     public float flickerRate = 0.1f; // Flicker speed during stun
     private SpriteRenderer spriteRenderer;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip1;
+    public AudioClip SFXClip2;
+    public AudioClip SFXClip3;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,6 +38,7 @@ public class EnemyCombatHandler : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        AudioRandomizer();
         if (health <= 0)
         {
             StartCoroutine(EnemyDeath());
@@ -99,6 +105,24 @@ public class EnemyCombatHandler : MonoBehaviour
         if (Random.Range(0, 100) < healthDropChance)
         {
             Instantiate(healthBoost, transform.position, Quaternion.identity);
+        }
+    }
+
+    private void AudioRandomizer()
+    {
+        int randomNumber = Random.Range(1, 4);
+
+        if (randomNumber == 1)
+        {
+            SFXManager.instance.PlaySFX(SFXClip1);
+        }
+        else if (randomNumber == 2)
+        {
+            SFXManager.instance.PlaySFX(SFXClip2);
+        }
+        else if (randomNumber == 3)
+        {
+            SFXManager.instance.PlaySFX(SFXClip3);
         }
     }
 }

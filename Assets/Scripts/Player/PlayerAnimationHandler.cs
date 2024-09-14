@@ -56,7 +56,7 @@ public class PlayerAnimationHandler : MonoBehaviour
             animator.SetFloat("Y", 0);
         }
 
-        if (rb.velocity.y == 0)
+        if (rb.velocity.y <= 0)
         {
             isFalling = false;
         }
@@ -78,12 +78,5 @@ public class PlayerAnimationHandler : MonoBehaviour
 
         // Once the jump is finished, reset the isJumping flag
         isJumping = false;
-    }
-
-    public void ForceIdle()
-    {
-        Debug.Log("Bnn");
-        animator.SetFloat("X", 0);
-        animator.SetFloat("Y", 0);
     }
 }
