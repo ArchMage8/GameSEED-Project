@@ -67,7 +67,7 @@ public class PlayerAnimationHandler : MonoBehaviour
         while (rb.velocity.y > 0)
         {
             isFalling = false;
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             animator.SetFloat("X", 0);
             animator.SetFloat("Y", 1);
             yield return null;

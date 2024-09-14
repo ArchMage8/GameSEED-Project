@@ -16,7 +16,7 @@ public class TimeCycle : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

@@ -3552,6 +3552,7 @@ MonoBehaviour:
   stunDuration: 0
   health: 0
   isBoss: 1
+  sceneTrigger: {fileID: 0}
   healthBoost: {fileID: 0}
   healthDropChance: 50
   flickerRate: 0.1
@@ -3646,7 +3647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7a22c101302e4d81f48932570f0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInRange: 1
+  playerInRange: 0
 --- !u!1 &4617841652929636180
 GameObject:
   m_ObjectHideFlags: 0

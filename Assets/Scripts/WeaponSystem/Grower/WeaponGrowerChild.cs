@@ -30,7 +30,7 @@ public class WeaponGrowerChild : MonoBehaviour
         isGrowing = false;
         ungrownVersion.SetActive(false);
         grownVersion.SetActive(true);
-        ResetWeaponGrowerChild();
+        //ResetWeaponGrowerChild();
     }
 
     public void ResetWeaponGrowerChild()

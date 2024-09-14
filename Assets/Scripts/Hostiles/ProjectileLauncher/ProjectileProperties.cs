@@ -16,7 +16,7 @@ public class ProjectileProperties : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Test");
+        //Debug.Log("Test");
         if (collision.gameObject.CompareTag("Player"))
         {
             HealthSystem playerHealth = collision.gameObject.GetComponent<HealthSystem>();

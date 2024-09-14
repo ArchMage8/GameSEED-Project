@@ -34,15 +34,15 @@ public class WeaponGrowerMain : MonoBehaviour
 
         if (isPlanting)
         {
-            if (Input.GetKeyDown(KeyCode.A) && WeaponManager.Instance.CanGrowSickle)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponManager.Instance.CanGrowSickle)
             {
                 PlantWeapon(sickleChild);
             }
-            else if (Input.GetKeyDown(KeyCode.B) && WeaponManager.Instance.CanGrowLasso)
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && WeaponManager.Instance.CanGrowLasso)
             {
                 PlantWeapon(lassoChild);
             }
-            else if (Input.GetKeyDown(KeyCode.C) && WeaponManager.Instance.CanGrowKnife)
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && WeaponManager.Instance.CanGrowKnife)
             {
                 PlantWeapon(knifeChild);
             }
@@ -51,19 +51,17 @@ public class WeaponGrowerMain : MonoBehaviour
 
     private void ActivatePlantingMode()
     {
-        sickleImage.SetActive(true);
-        lassoImage.SetActive(true);
-        knifeImage.SetActive(true);
+        Debug.Log("testing1");
 
-        sickleImage.SetActive(!WeaponManager.Instance.CanGrowSickle);
-        lassoImage.SetActive(!WeaponManager.Instance.CanGrowLasso);
-        knifeImage.SetActive(!WeaponManager.Instance.CanGrowKnife);
+        sickleImage.SetActive(WeaponManager.Instance.CanGrowSickle);
+        lassoImage.SetActive(WeaponManager.Instance.CanGrowLasso);
+        knifeImage.SetActive(WeaponManager.Instance.CanGrowKnife);
     }
 
     private void PlantWeapon(GameObject weaponChild)
     {
         weaponChild.SetActive(true);
-        ResetGrower();
+        //ResetGrower();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,7 +77,10 @@ public class WeaponGrowerMain : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
-            ResetGrower();
+            if (!isPlanting)
+            {
+                ResetGrower();
+            }
         }
     }
 
@@ -92,5 +93,9 @@ public class WeaponGrowerMain : MonoBehaviour
         sickleImage.SetActive(false);
         lassoImage.SetActive(false);
         knifeImage.SetActive(false);
+
+        sickleChild.SetActive(false);
+        lassoChild.SetActive(false);
+        knifeChild.SetActive(false);
     }
 }

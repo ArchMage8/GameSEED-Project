@@ -29,7 +29,7 @@ public class PlayerCombatHandler : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
-        Debug.Log(isAttacking);
+        //Debug.Log(isAttacking);
     }
 
     private IEnumerator Attack()
@@ -37,7 +37,7 @@ public class PlayerCombatHandler : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
-        Debug.Log(isAttacking + "a");
+        //Debug.Log(isAttacking + "a");
         playerMovement.canMove = false;
         playerMovement.StopMovement();
         animator.SetTrigger("Attack");
