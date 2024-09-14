@@ -12,7 +12,7 @@ public class CameraVisonBlock : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Test");
+        //Debug.Log("Test");
         Target.SetActive(true);
         
     }
@@ -21,7 +21,7 @@ public class CameraVisonBlock : MonoBehaviour
     {
         if (TestBool)
         {
-            Debug.Log("test2");
+            //Debug.Log("test2");
         }
     }
 
@@ -30,7 +30,7 @@ public class CameraVisonBlock : MonoBehaviour
     {
         if (other.gameObject == Detector)
         {
-            Debug.Log("Enter");
+            //Debug.Log("Enter");
             Target.SetActive(false);
             TestBool = true;
         }
@@ -40,7 +40,7 @@ public class CameraVisonBlock : MonoBehaviour
     {
         if (other.gameObject == Detector)
         {
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
             Target.SetActive(true);
         }
     }

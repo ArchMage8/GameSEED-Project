@@ -6,12 +6,15 @@ public class ProjectileProperties : MonoBehaviour
     [SerializeField] private float lifetime = 5f;
     [SerializeField] private int damageToPlayer = 1;
 
+    //[SerializeField] private bool isBoss = false;
+
+
     private void Start()
     {
         Destroy(gameObject, lifetime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Test");
         if (collision.gameObject.CompareTag("Player"))
@@ -23,6 +26,5 @@ public class ProjectileProperties : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
     }
 }

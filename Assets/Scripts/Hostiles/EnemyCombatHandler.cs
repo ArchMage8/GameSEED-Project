@@ -11,6 +11,7 @@ public class EnemyCombatHandler : MonoBehaviour
 
     [Header("Boss Settings")]
     public bool isBoss;
+    public GameObject sceneTrigger;
 
     [Header("Health Drop Settings")]
     public GameObject healthBoost; // Assign this in the inspector
@@ -23,6 +24,10 @@ public class EnemyCombatHandler : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (isBoss)
+        {
+            sceneTrigger.SetActive(false);
+        }
     }
 
     public void TakeDamage(float damage)
@@ -80,16 +85,13 @@ public class EnemyCombatHandler : MonoBehaviour
         }
 
         // If boss, activate scene trigger
-        if (isBoss)
+        else if (isBoss)
         {
-            GameObject sceneTrigger = GameObject.Find("SceneTrigger");
-            if (sceneTrigger != null)
-            {
-                sceneTrigger.SetActive(true);
-            }
-        }
 
-        Destroy(gameObject);
+            sceneTrigger.SetActive(true);
+
+            Destroy(gameObject);
+        }
     }
 
     private void DropHealth()
