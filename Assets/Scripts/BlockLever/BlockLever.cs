@@ -4,7 +4,7 @@ public class BlockLever : MonoBehaviour
 {
     [Header("References")]
     public BlockMain block;
-    public GameObject requiredPrefab;
+    public GameObject knifePrefab;
 
     [Header("State Variables")]
     private bool playerInRange = false;
@@ -23,8 +23,9 @@ public class BlockLever : MonoBehaviour
         {
             playerInRange = true;
         }
-        else if (other.gameObject == requiredPrefab)
+        else if (other.CompareTag("Knife"))
         {
+            Debug.Log("T3est");
             block.MoveBlock();
         }
     }
