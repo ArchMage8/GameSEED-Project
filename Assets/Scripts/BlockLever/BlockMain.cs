@@ -11,6 +11,7 @@ public class BlockMain : MonoBehaviour
 
     [Header("Movement Settings")]
     public float moveSpeed = 1f;
+    public float playerSpeedScale = 3f;
 
     [Header("State Variables")]
     private Vector3 originalPosition;
@@ -37,6 +38,10 @@ public class BlockMain : MonoBehaviour
         {
             player = collision.gameObject;
             player.transform.parent = transform;
+
+            PlayerMovement temp = player.GetComponentInParent<PlayerMovement>();
+            temp.speed *= playerSpeedScale;
+            //Speed up logic
         }
     }
 

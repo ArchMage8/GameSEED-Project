@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizonal;
 
     [Header("Controls: ")]
-    [SerializeField] private float speed = 8f;
+    public float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
    
     private bool isFacingRight = true;
@@ -29,6 +29,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
+        if (TimeCycle.Instance.isChanging == true)
+        {
+            canMove = false;
+        }
+
+        else
+        {
+            canMove = true;
+        }
+
         horizonal = Input.GetAxisRaw("Horizontal");
 
         isMoving = horizonal != 0f;

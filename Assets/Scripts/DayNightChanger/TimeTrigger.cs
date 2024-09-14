@@ -9,18 +9,21 @@ public class TimeTrigger : MonoBehaviour
     [SerializeField] private float animationEndWait = 2f;
 
     private bool playerInRange;
+    private bool inProgress = false;
 
     private void Update()
     {
-        if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
+        if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)) && !inProgress)
         {
             if (TimeCycle.Instance.TimeValue % 2 == 1)
             {
+                inProgress = true;
                 StartCoroutine(ChangeTimeDay());
             }
 
             else
             {
+                inProgress = true;
                 StartCoroutine(ChangeTimeNight());
             }
         }
@@ -44,7 +47,7 @@ public class TimeTrigger : MonoBehaviour
 
     private IEnumerator ChangeTimeDay()
     {
-       
+       TimeCycle.Instance.isChanging = true;
         
         Checkpoint.instance.UpdateCheckpoint(transform);
         Daycanvas.SetActive(true);
@@ -52,6 +55,9 @@ public class TimeTrigger : MonoBehaviour
         yield return new WaitForSeconds(animationStartWait);
         TimeCycle.Instance.IncreaseTimeValue();
         StartCoroutine(DisableCanvasDay());
+
+        TimeCycle.Instance.isChanging = false;
+        inProgress = false;
     }
 
     private IEnumerator DisableCanvasDay()
@@ -62,18 +68,18 @@ public class TimeTrigger : MonoBehaviour
     
     private IEnumerator ChangeTimeNight()
     {
-       
-        
+        TimeCycle.Instance.isChanging = true;
+
         Checkpoint.instance.UpdateCheckpoint(transform);
         Nightcanvas.SetActive(true);
 
         yield return new WaitForSeconds(animationStartWait);
 
         TimeCycle.Instance.IncreaseTimeValue();
-
-      
-     
         StartCoroutine(DisableCanvasNight());
+
+        TimeCycle.Instance.isChanging = false;
+        inProgress = false;
     }
 
     private IEnumerator DisableCanvasNight()

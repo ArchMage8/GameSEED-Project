@@ -16,6 +16,7 @@ public class WeaponGrowerMain : MonoBehaviour
 
     private bool playerInRange;
     private bool isPlanting;
+    private bool canPlant = true;
 
     private void Start()
     {
@@ -28,11 +29,11 @@ public class WeaponGrowerMain : MonoBehaviour
         if (playerInRange && !isPlanting && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
             isPlanting = true;
-            spriteRenderer.enabled = false;
+            //spriteRenderer.enabled = false;
             ActivatePlantingMode();
         }
 
-        if (isPlanting)
+        if (isPlanting && canPlant)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && WeaponManager.Instance.CanGrowSickle)
             {
@@ -61,6 +62,7 @@ public class WeaponGrowerMain : MonoBehaviour
     private void PlantWeapon(GameObject weaponChild)
     {
         weaponChild.SetActive(true);
+        canPlant = false;
         //ResetGrower();
     }
 
@@ -88,6 +90,7 @@ public class WeaponGrowerMain : MonoBehaviour
     {
         playerInRange = false;
         isPlanting = false;
+        canPlant = true;
         spriteRenderer.enabled = true;
 
         sickleImage.SetActive(false);

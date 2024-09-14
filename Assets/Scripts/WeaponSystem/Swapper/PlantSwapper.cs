@@ -7,11 +7,16 @@ public class PlantSwapper : MonoBehaviour
     public bool targetLasso;
     public bool targetKnife;
 
+    [Header("Parent Object")]
+    public WeaponGrowerMain MainObject;
+
     private bool playerInRange;
+    private WeaponGrowerMain growerMain;
 
     private void Start()
     {
         ValidateTargetSelection();
+        growerMain = MainObject.GetComponent<WeaponGrowerMain>();
     }
 
     private void Update()
@@ -19,6 +24,7 @@ public class PlantSwapper : MonoBehaviour
         if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
             SwapWeapon();
+            growerMain.ResetGrower();
         }
     }
 

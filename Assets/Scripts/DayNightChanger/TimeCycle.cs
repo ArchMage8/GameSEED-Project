@@ -4,6 +4,7 @@ public class TimeCycle : MonoBehaviour
 {
     [Header("Time Variables")]
     public int TimeValue = 1;
+    public bool isChanging = false;
 
     private static TimeCycle instance;
 
