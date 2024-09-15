@@ -32,6 +32,8 @@ public class WeaponGrowerMain : MonoBehaviour
     {
         if (playerInRange && !isPlanting && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
+            if(WeaponManager.Instance.CanGrowSickle || WeaponManager.Instance.CanGrowKnife || WeaponManager.Instance.CanGrowLasso)
+            
             isPlanting = true;
             //spriteRenderer.enabled = false;
             ActivatePlantingMode();
