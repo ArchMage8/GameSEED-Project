@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private bool canPlaySound = true;
+    private float initialGravity;
     
 
     private bool isFalling;
@@ -40,11 +41,17 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        initialGravity = rb.gravityScale;
     }
 
     private void Update()
     {
         FallHandler();
+
+        if (isGrounded)
+        {
+            rb.gravityScale = initialGravity;
+        }
 
         if (TimeCycle.Instance.isChanging == true)
         {
