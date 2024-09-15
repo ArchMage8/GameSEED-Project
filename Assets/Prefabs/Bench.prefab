@@ -160,8 +160,8 @@ MonoBehaviour:
   Nightcanvas: {fileID: 0}
   animationStartWait: 3
   animationEndWait: 4.5
-  SFXClipStart: {fileID: 0}
-  SFXClipEnd: {fileID: 0}
+  SFXClipStart: {fileID: 8300000, guid: 4c5c5e7903206bd4d80142e11d4dcf55, type: 3}
+  SFXClipEnd: {fileID: 8300000, guid: ad78788a8f31c624c9b8e5174fefadff, type: 3}
 --- !u!61 &6744911349324852717
 BoxCollider2D:
   m_ObjectHideFlags: 0

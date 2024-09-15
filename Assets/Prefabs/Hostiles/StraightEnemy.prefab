@@ -566,6 +566,9 @@ MonoBehaviour:
   delayBetweenShots: 5
   direction: 0
   animator: {fileID: 453012279218941775}
+  Player: {fileID: 0}
+  minRange: 20
+  SFXClip: {fileID: 8300000, guid: 5856ab7f5aec5d146affdc457b27aaea, type: 3}
 --- !u!114 &2407874142591582611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,9 +586,13 @@ MonoBehaviour:
   stunDuration: 3
   health: 10
   isBoss: 0
+  sceneTrigger: {fileID: 0}
   healthBoost: {fileID: 0}
   healthDropChance: 50
   flickerRate: 0.1
+  SFXClip1: {fileID: 8300000, guid: cfc2a844f53b5b348ba9902db5d6dce5, type: 3}
+  SFXClip2: {fileID: 8300000, guid: 72a5c42e93524ea4f8484d65190606ac, type: 3}
+  SFXClip3: {fileID: 8300000, guid: a2ad76dbf30dbc14baa161274689d87a, type: 3}
 --- !u!95 &453012279218941775
 Animator:
   serializedVersion: 5

@@ -10906,6 +10906,7 @@ GameObject:
   - component: {fileID: 3847263782584938681}
   - component: {fileID: 494056141201814028}
   - component: {fileID: 6837238851805972591}
+  - component: {fileID: 2206875577222695697}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11034,7 +11035,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 180.80806
+  m_Distance: 0.005
   m_MaxDistanceOnly: 0
 --- !u!120 &2447613658042184817
 LineRenderer:
@@ -11191,7 +11192,22 @@ MonoBehaviour:
   invincibleDuration: 0.5
   flickerRate: 0.5
   DeathCanvas: {fileID: 0}
-  SFXClip: {fileID: 0}
+  SFXClip: {fileID: 8300000, guid: 40b2e53e3c0a45b4cbf31718035aead9, type: 3}
+--- !u!114 &2206875577222695697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588073271897757942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ccc3be515bf8146ad6b0182738c646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepClip: {fileID: 8300000, guid: f7a94ee76117f634cbcb835b6672fbdb, type: 3}
+  audioSource: {fileID: 0}
+  isWalking: 0
 --- !u!1 &8588073272101992130
 GameObject:
   m_ObjectHideFlags: 0
