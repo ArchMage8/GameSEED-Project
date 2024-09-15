@@ -16,7 +16,7 @@ public class HealthSystem : MonoBehaviour
 
     [Header ("Core System")]
     public int Health;
-    public int invincibleDuration;
+    public float invincibleDuration;
     [SerializeField] private float flickerRate = 0.5f;
     [SerializeField] private GameObject DeathCanvas;
 
