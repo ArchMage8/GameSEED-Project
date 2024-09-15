@@ -5,10 +5,27 @@
 - [x] Hitting The ground after jumping (ties into jumping)
 - [x] Lever
 - [x] Gate 
-- [ ] Enemy Shoot
+- [x] Enemy Shoot
 - [x] Leaves Transition
 - [x] Platform Moving
 - [x] Take Weapon from Plants
 - [x] Plant Seeds
 - [x] Hover
 - [x] Click
+
+implemented
+- [ ] Move
+- [ ] Attack(3)
+- [ ] Enemy Hit(3)
+- [ ] Player Hit
+- [x] Hitting The ground after jumping (ties into jumping)
+- [ ] Lever
+- [ ] Gate 
+- [ ] Enemy Shoot
+- [ ] Leaves Transition
+- [ ] Platform Moving
+- [ ] Take Weapon from Plants
+- [ ] Plant Seeds
+- [ ] Hover
+- [ ] Click
+- [x] Lasso Swing

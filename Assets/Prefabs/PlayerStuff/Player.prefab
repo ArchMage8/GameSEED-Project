@@ -10700,6 +10700,9 @@ MonoBehaviour:
   damageDealt: 1
   animator: {fileID: 8588073271553804982}
   MainObject: {fileID: 8588073271897757942}
+  SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
+  SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
+  SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
 --- !u!1 &8588073271820524155
 GameObject:
   m_ObjectHideFlags: 0
@@ -10999,6 +11002,8 @@ MonoBehaviour:
     m_Bits: 8
   isGrounded: 0
   canMove: 1
+  isMoving: 0
+  SFXClip: {fileID: 8300000, guid: c7c6138984054fc4585db7c4e9e382f6, type: 3}
 --- !u!114 &1968374218202108232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11028,7 +11033,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.005
+  m_Distance: 180.80806
   m_MaxDistanceOnly: 0
 --- !u!120 &2447613658042184817
 LineRenderer:
@@ -11144,6 +11149,7 @@ MonoBehaviour:
   inRange: 0
   swingForce: 5
   lineAppearDuration: 0
+  SFXClip: {fileID: 8300000, guid: 8cc30fbfccda6ac4f8a785b3934bea74, type: 3}
 --- !u!114 &494056141201814028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11762,6 +11768,9 @@ MonoBehaviour:
   damageDealt: 1
   animator: {fileID: 8588073272923333173}
   MainObject: {fileID: 8588073271897757942}
+  SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
+  SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
+  SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
 --- !u!1 &8588073273105991697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11904,6 +11913,9 @@ MonoBehaviour:
   projectileSpeed: 20
   playerAnimator: {fileID: 8588073273105991698}
   MainObject: {fileID: 8588073271897757942}
+  SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
+  SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
+  SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
 --- !u!1 &8840466109536954623
 GameObject:
   m_ObjectHideFlags: 0
