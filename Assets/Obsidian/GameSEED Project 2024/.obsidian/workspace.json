@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game/Art/Art references.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game/Art/Art references.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Game/Art/Art references.md",
+                "file": "Game/Art/Art Dashboard.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Game/Art/Art references.md"
+                "file": "Game/Art/Art Dashboard.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "89b15724ece564c1",
   "lastOpenFiles": [
+    "Game/Art/Art references.md",
     "Game/Art/To Do List Art.md",
     "Game/Design/Weapon mechanics.md",
     "Game/Program/To Do List Program.md",
@@ -156,7 +157,6 @@
     "Game/Program/Program Dashboard.md",
     "Game/Design/Player Mechanics.md",
     "Game/Art/What artstyle should the player character be in.md",
-    "Game/Art/Art references.md",
     "Game/Art/Pics/Environment refs/2XeVzlm_LtoOyZ3_3WbzdkqvnVIxH74I1szcuBIXcJs-2736993533.jpg",
     "Game/Art/Art Dashboard.md",
     "Game/Art/Pics/Environment refs.meta",
