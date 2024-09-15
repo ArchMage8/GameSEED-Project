@@ -6,15 +6,8 @@ public class ProjectileProperties : MonoBehaviour
     [SerializeField] private float lifetime = 5f;
     [SerializeField] private int damageToPlayer = 1;
 
-    [Header("Audio Files")]
-    public AudioClip SFXClip;
 
     //[SerializeField] private bool isBoss = false;
-
-    private void Awake()
-    {
-        SFXManager.instance.PlaySFX(SFXClip);
-    }
 
     private void Start()
     {

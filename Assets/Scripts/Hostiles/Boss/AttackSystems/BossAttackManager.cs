@@ -22,6 +22,9 @@ public class BossAttackManager : MonoBehaviour
     public float delayTrackAttack;
     public float delayAfterCycle = 5f;
 
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+
     private bool isCycling = false;
     private EnemyCombatHandler enemyCombatHandler;
     private bool canAttack;
@@ -56,6 +59,7 @@ public class BossAttackManager : MonoBehaviour
         yield return new WaitForSeconds(delaySpiralAttack);
 
         // Spiral Attack
+        ShooterSFXManager.instance.PlaySFX(SFXClip);
         spiralAttack.SpiralAttack();
         //yield return new WaitUntil(() => spiralAttack.isAttackComplete);
         yield return new WaitForSeconds(6f);
@@ -63,6 +67,7 @@ public class BossAttackManager : MonoBehaviour
 
         // Delay between attacks
         yield return new WaitForSeconds(delayBeforeAnimation);
+        ShooterSFXManager.instance.PlaySFX(SFXClip);
         animator.SetBool("Star", true);
         yield return new WaitForSeconds(delayStarAttack);
 
@@ -88,6 +93,7 @@ public class BossAttackManager : MonoBehaviour
         yield return new WaitForSeconds(delayTrackAttack);
 
         // Track Attack
+        ShooterSFXManager.instance.PlaySFX(SFXClip);
         trackAttack.TrackAttack();
         //yield return new WaitUntil(() => trackAttack.isAttackComplete);
         yield return new WaitForSeconds(4f);

@@ -9,6 +9,14 @@ public class NormalShooter : MonoBehaviour
     [SerializeField] private int direction = 0;
     [SerializeField] private Animator animator;
 
+    [Header("PlayerStuffs")]
+    [SerializeField] private Transform Player;
+    [SerializeField] private int minRange;
+    private bool playerInRange = false;
+
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+
     private EnemyCombatHandler enemyCombatHandler;
 
     private float timeSinceLastShot = 0f;
@@ -28,6 +36,8 @@ public class NormalShooter : MonoBehaviour
 
     private void Update()
     {
+        CheckDistance();
+        
         timeSinceLastShot += Time.deltaTime;
 
         if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
@@ -40,6 +50,8 @@ public class NormalShooter : MonoBehaviour
 
     private void ShootProjectile()
     {
+        ShooterSFXManager.instance.PlaySFX(SFXClip);
+
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Transform child = projectile.transform.GetChild(0);
         if (child != null)
@@ -72,6 +84,21 @@ public class NormalShooter : MonoBehaviour
         private void Update()
         {
             transform.Translate(speed * Time.deltaTime * direction);
+        }
+    }
+
+    private void CheckDistance()
+    {
+        float distance = Vector2.Distance(transform.position, Player.position);
+
+        if(distance <= minRange)
+        {
+            playerInRange = true;
+        }
+
+        else
+        {
+            playerInRange = false;
         }
     }
 }

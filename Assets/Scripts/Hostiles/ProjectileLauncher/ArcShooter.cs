@@ -11,6 +11,14 @@ public class ArcShooter : MonoBehaviour
     [SerializeField] private float delayBetweenShots = 2f;
     [SerializeField] private Animator animator;
 
+    [Header("PlayerStuffs")]
+    [SerializeField] private Transform Player;
+    [SerializeField] private int minRange;
+    private bool playerInRange = false;
+
+    [Header("Audio Files")]
+    public AudioClip SFXClip;
+
     private EnemyCombatHandler enemyCombatHandler;
 
     private float timeSinceLastShot = 0f;
@@ -30,9 +38,11 @@ public class ArcShooter : MonoBehaviour
 
     private void Update()
     {
+        CheckDistance();
+        
         timeSinceLastShot += Time.deltaTime;
 
-        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
+        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack && playerInRange)
         {
             animator.SetTrigger("Shoot");
             LaunchProjectile();
@@ -42,6 +52,7 @@ public class ArcShooter : MonoBehaviour
 
     private void LaunchProjectile()
     {
+        ShooterSFXManager.instance.PlaySFX(SFXClip);
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
@@ -51,6 +62,21 @@ public class ArcShooter : MonoBehaviour
             Vector2 launchDirection = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad)).normalized;
             Vector2 initialVelocity = launchDirection * launchSpeed;
             rb.velocity = initialVelocity;
+        }
+    }
+
+    private void CheckDistance()
+    {
+        float distance = Vector2.Distance(transform.position, Player.position);
+
+        if (distance <= minRange)
+        {
+            playerInRange = true;
+        }
+
+        else
+        {
+            playerInRange = false;
         }
     }
 }
