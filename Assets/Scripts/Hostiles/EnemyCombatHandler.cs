@@ -74,6 +74,7 @@ public class EnemyCombatHandler : MonoBehaviour
         //Debug.Log("Death");
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         float timer = 0f;
+        visual.color = Color.red;
         while (timer < stunDuration)
         {
             visual.enabled = !visual.enabled;
