@@ -26,6 +26,8 @@ public class BossAttackManager : MonoBehaviour
     public AudioClip SpiralAttackSFXClip;
     public AudioClip StarAttackSFXClip;
     public AudioClip TrackAttackSFXClip;
+    public AudioClip DualBeamAttackSFXClip;
+    public AudioClip SeedLaserAttackSFXClip;
 
     private bool isCycling = false;
     private EnemyCombatHandler enemyCombatHandler;
@@ -107,6 +109,7 @@ public class BossAttackManager : MonoBehaviour
         //Dual beam attack
         Debug.Log("Dual Beam START");
         yield return new WaitForSeconds(delayBeforeAnimation);
+        ShooterSFXManager.instance.PlaySFX(DualBeamAttackSFXClip);
         animator.SetBool("DualBeam", true);
         yield return new WaitForSeconds(15f);
         animator.SetBool("DualBeam", false);
@@ -115,6 +118,7 @@ public class BossAttackManager : MonoBehaviour
         //Seed laser attack
         Debug.Log("Seed Laser START");
         yield return new WaitForSeconds(delayBeforeAnimation);
+        ShooterSFXManager.instance.PlaySFX(SeedLaserAttackSFXClip);
         animator.SetBool("SeedLaser", true);
         yield return new WaitForSeconds(7.5f);
         animator.SetBool("SeedLaser", false);
