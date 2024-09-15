@@ -42,7 +42,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D
+    path: Visuals/Lights/Light 2D (1)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -70,7 +70,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (1)
+    path: Visuals/Lights/Light 2D (2)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -98,7 +98,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (2)
+    path: Visuals/Lights/Light 2D (3)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -126,7 +126,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (3)
+    path: Visuals/Lights/Light 2D (4)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -154,7 +154,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (4)
+    path: Visuals/Lights/Light 2D
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
@@ -173,8 +173,10 @@ AnimationClip:
       value: {fileID: -68240354, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
     - time: 0.2
       value: {fileID: -1097524165, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
+    - time: 0.21666667
+      value: {fileID: -1097524165, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
     attribute: m_Sprite
-    path: Gun
+    path: Visuals/Gun
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -185,42 +187,42 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3040561238
+      path: 2050138525
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 613538969
+      path: 1361048158
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 264015706
+      path: 1208271647
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 380091931
+      path: 121984472
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1508255964
+      path: 1270620344
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1926661051
+      path: 1654857339
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -234,12 +236,13 @@ AnimationClip:
     - {fileID: -2092227690, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
     - {fileID: -68240354, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
     - {fileID: -1097524165, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
+    - {fileID: -1097524165, guid: cabab984721bc7a4f8cfcfae09f13987, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.21666667
+    m_StopTime: 0.23333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -280,7 +283,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D
+    path: Visuals/Lights/Light 2D (1)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -308,7 +311,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (1)
+    path: Visuals/Lights/Light 2D (2)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -336,7 +339,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (2)
+    path: Visuals/Lights/Light 2D (3)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -364,7 +367,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (3)
+    path: Visuals/Lights/Light 2D (4)
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -392,7 +395,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Lights/Light 2D (4)
+    path: Visuals/Lights/Light 2D
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

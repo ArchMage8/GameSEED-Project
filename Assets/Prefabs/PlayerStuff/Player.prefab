@@ -10696,8 +10696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b985462cf1aaedd4399b7a5172ba1e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 5
-  damageDealt: 1
+  rayLength: 5.5
+  damageDealt: 2
   animator: {fileID: 8588073271553804982}
   MainObject: {fileID: 8588073271897757942}
   SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
@@ -11813,8 +11813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b985462cf1aaedd4399b7a5172ba1e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 5
-  damageDealt: 1
+  rayLength: 2.5
+  damageDealt: 3
   animator: {fileID: 8588073272923333173}
   MainObject: {fileID: 8588073271897757942}
   SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}

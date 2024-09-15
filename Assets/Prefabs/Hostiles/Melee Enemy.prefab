@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 8707000046811001109}
   m_Layer: 0
   m_Name: Melee Enemy
-  m_TagString: Untagged
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,6 +221,7 @@ MonoBehaviour:
   healthBoost: {fileID: 0}
   healthDropChance: 50
   flickerRate: 0.5
+  visual: {fileID: 1911064422115999968}
   SFXClip1: {fileID: 8300000, guid: cfc2a844f53b5b348ba9902db5d6dce5, type: 3}
   SFXClip2: {fileID: 8300000, guid: 72a5c42e93524ea4f8484d65190606ac, type: 3}
   SFXClip3: {fileID: 8300000, guid: a2ad76dbf30dbc14baa161274689d87a, type: 3}

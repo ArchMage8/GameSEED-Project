@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1191472791235227071}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773403343692718553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.482, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33,8 +33,8 @@ Transform:
   - {fileID: 7651244226370430208}
   - {fileID: 3744398632343994414}
   - {fileID: 2310520407659377208}
-  m_Father: {fileID: 2407874142591582615}
-  m_RootOrder: 1
+  m_Father: {fileID: 2407874141903326927}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105128867656753616
 GameObject:
@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7651244226370430208}
   - component: {fileID: 5787569022257262567}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2407874141387743666}
   - component: {fileID: 2407874141387743669}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2407874141765861618}
   - component: {fileID: 2407874141765861621}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2407874141903326927}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,6 +346,7 @@ Transform:
   - {fileID: 2407874141765861618}
   - {fileID: 2407874142309965730}
   - {fileID: 2407874141387743666}
+  - {fileID: 1191472791235227071}
   m_Father: {fileID: 2407874142591582615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -359,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2407874142309965730}
   - component: {fileID: 2407874142309965733}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,9 +448,9 @@ GameObject:
   - component: {fileID: 2407874142591582610}
   - component: {fileID: 2407874142591582611}
   - component: {fileID: 453012279218941775}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: StraightEnemy
-  m_TagString: Untagged
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +468,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2407874141903326927}
-  - {fileID: 1191472791235227071}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -590,6 +590,7 @@ MonoBehaviour:
   healthBoost: {fileID: 0}
   healthDropChance: 50
   flickerRate: 0.1
+  visual: {fileID: 2407874141903326924}
   SFXClip1: {fileID: 8300000, guid: cfc2a844f53b5b348ba9902db5d6dce5, type: 3}
   SFXClip2: {fileID: 8300000, guid: 72a5c42e93524ea4f8484d65190606ac, type: 3}
   SFXClip3: {fileID: 8300000, guid: a2ad76dbf30dbc14baa161274689d87a, type: 3}
@@ -624,7 +625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485014282870259190}
   - component: {fileID: 7214477437599642271}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3744398632343994414}
   - component: {fileID: 2606056868231006138}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2310520407659377208}
   - component: {fileID: 2817705413269865964}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752393964948577553}
   - component: {fileID: 1029279532125350674}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
