@@ -9,35 +9,45 @@ public class EnemyMelee : MonoBehaviour
     public float attackInterval = 2f;
 
     private bool isColliding = false;
+    private bool canAttack = true;
+
+    private HealthSystem playerHealth;
+
+    private void Update()
+    {
+        if(canAttack && isColliding)
+        {
+            //Debug.Log("Test");
+            playerHealth.TakeDamage(damage);
+            StartCoroutine(DealDamageOverTime());
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            HealthSystem playerHealth = collision.GetComponent<HealthSystem>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-                isColliding = true;
-                StartCoroutine(DealDamageOverTime(playerHealth));
-            }
+            isColliding = true;
+            playerHealth = collision.GetComponent<HealthSystem>();
+           
+            
         }
     }
 
-    private IEnumerator DealDamageOverTime(HealthSystem playerHealth)
+    private IEnumerator DealDamageOverTime()
     {
-        while (isColliding)
-        {
-            yield return new WaitForSeconds(attackInterval);
-            playerHealth.TakeDamage(damage);
-        }
+        canAttack = false;
+        yield return new WaitForSeconds(attackInterval);
+        canAttack = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+             playerHealth = null;
             isColliding = false;
+           
         }
     }
 }

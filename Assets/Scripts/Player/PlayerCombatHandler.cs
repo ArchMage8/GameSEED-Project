@@ -38,6 +38,8 @@ public class PlayerCombatHandler : MonoBehaviour
 
     private void Update()
     {
+        Debug.DrawRay(transform.position, Vector2.right * transform.localScale.x * rayLength, Color.red);
+
         if (canAttack && (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.J)))
         {
             StartCoroutine(Attack());
@@ -60,7 +62,10 @@ public class PlayerCombatHandler : MonoBehaviour
             rb.gravityScale = TempGravity;
         }
 
+       
+
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
+        
         AudioRandomizer();
 
         foreach (var hit in hits)

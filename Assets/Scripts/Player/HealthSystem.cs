@@ -32,7 +32,7 @@ public class HealthSystem : MonoBehaviour
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        
 
         DeathCanvas.SetActive(false);
     }
@@ -121,13 +121,13 @@ public class HealthSystem : MonoBehaviour
     private IEnumerator InvincibleState()
     {
         Invincible = true;
-        
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         float timer = 0f;
         while (timer < invincibleDuration)
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
             yield return new WaitForSeconds(flickerRate);
-            timer += 0.1f;
+            timer += 1f;
         }
 
         Invincible = false;

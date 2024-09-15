@@ -19,7 +19,7 @@ public class EnemyCombatHandler : MonoBehaviour
 
     [Header("Flicker Settings")]
     public float flickerRate = 0.1f; // Flicker speed during stun
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer visual;
 
     [Header("Audio Files")]
     public AudioClip SFXClip1;
@@ -30,7 +30,6 @@ public class EnemyCombatHandler : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         if (isBoss)
         {
             sceneTrigger.SetActive(false);
@@ -39,6 +38,7 @@ public class EnemyCombatHandler : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        //Debug.Log("takeDamage");
         health -= damage;
         AudioRandomizer();
         if (health <= 0)
@@ -53,60 +53,47 @@ public class EnemyCombatHandler : MonoBehaviour
 
     private IEnumerator StunState()
     {
-        CanAttack = false;
-        CanMove = false;
+        
 
         float timer = 0f;
         while (timer < stunDuration)
         {
-            spriteRenderer.enabled = !spriteRenderer.enabled;
+            visual.enabled = !visual.enabled;
             yield return new WaitForSeconds(flickerRate);
-            timer += flickerRate;
+            //visual.enabled = true;
+            timer += 1f;
         }
-
-        spriteRenderer.enabled = true;
-        CanAttack = true;
-        CanMove = true;
+        Debug.Log("Stun");
     }
 
     private IEnumerator EnemyDeath()
     {
-        float blinkDuration = 0f;
-        float blinkInterval = 0.1f;
-        Color originalColor = spriteRenderer.color;
-        Color blinkColor = Color.red;
+        Debug.Log("Death");
 
-        // Blink red before destruction
-        while (blinkDuration < stunDuration) // X represents the duration in seconds
+        float timer = 0f;
+        while (timer < stunDuration)
         {
-            spriteRenderer.color = blinkColor;
-            yield return new WaitForSeconds(blinkInterval);
-            spriteRenderer.color = originalColor;
-            yield return new WaitForSeconds(blinkInterval);
-            blinkDuration += blinkInterval * 2;
+            visual.enabled = !visual.enabled;
+            yield return new WaitForSeconds(flickerRate);
+            timer += 1f;
         }
+       
 
-        // Drop health if not a boss
-        if (!isBoss)
+        if (isBoss)
         {
-            DropHealth();
-        }
-
-        // If boss, activate scene trigger
-        else if (isBoss)
-        {
-
             sceneTrigger.SetActive(true);
-
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
+
+   
 
     private void DropHealth()
     {
         if (Random.Range(0, 100) < healthDropChance)
         {
-            Instantiate(healthBoost, transform.position, Quaternion.identity);
+            //Instantiate(healthBoost, transform.position, Quaternion.identity);
         }
     }
 
