@@ -59,7 +59,7 @@ public class EnemyCombatHandler : MonoBehaviour
         {
             StartCoroutine(EnemyDeath());
         }
-        else if( health > 0 && !isBoss)
+        else
         {
             StartCoroutine(StunState());
         }
@@ -69,7 +69,10 @@ public class EnemyCombatHandler : MonoBehaviour
     {
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
 
-        boxCollider2D.enabled = false;
+        if (!isBoss)
+        {
+            boxCollider2D.enabled = false;
+        }
 
         float timer = 0f;
         while (timer < stunDuration)
@@ -77,7 +80,11 @@ public class EnemyCombatHandler : MonoBehaviour
             visual.SetActive(false);
             yield return new WaitForSeconds(flickerRate);
             visual.SetActive(true);
-          
+
+            if (isBoss)
+            {
+                boxCollider2D.enabled = true;
+            }
             timer += 1f;
         }
         visual.SetActive(true);
