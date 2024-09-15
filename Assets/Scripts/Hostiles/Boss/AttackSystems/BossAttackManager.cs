@@ -13,6 +13,7 @@ public class BossAttackManager : MonoBehaviour
     public BossAttackSpiral spiralAttack;
     public BossAttackStar starAttack;
     public BossAttackTrack trackAttack;
+    public GameObject barrier;
     public Animator animator;
 
     [Header("Timing Settings")]
@@ -37,13 +38,16 @@ public class BossAttackManager : MonoBehaviour
     {
         enemyCombatHandler = GetComponent<EnemyCombatHandler>();
         canAttack = enemyCombatHandler.CanAttack;
+
+        barrier.SetActive(false);
     }
 
     private void Update()
     {
         if (playerDetector.playerInRange && !isCycling)
         {
-            Debug.Log("Test");
+            //Debug.Log("Test");
+            barrier.SetActive(true);
             StartCoroutine(AttackCycle());
         }
 

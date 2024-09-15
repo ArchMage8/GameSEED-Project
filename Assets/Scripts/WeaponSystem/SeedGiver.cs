@@ -11,6 +11,9 @@ public class SeedGiver : MonoBehaviour
     public AudioClip TakeSeedSFXClip;
     public float volume;
 
+    [Header("UI Thingy")]
+    public GameObject UIThingy;
+
     private bool playerInRange;
 
     private void Update()
@@ -18,6 +21,7 @@ public class SeedGiver : MonoBehaviour
         if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
             SFXManager.instance.PlaySFX(TakeSeedSFXClip, volume);
+            UIThingy.SetActive(true);
             Interact();
         }
     }
