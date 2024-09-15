@@ -18,7 +18,7 @@ public class PlatformMove_Audio : MonoBehaviour
 
     private void Update()
     {
-        if (blockMain.isMoving)
+        if (blockMain.isMoving && canPlaySound)
         {
             StartCoroutine(PlayPlatformSound());
         }

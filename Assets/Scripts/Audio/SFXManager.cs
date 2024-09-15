@@ -27,8 +27,8 @@ public class SFXManager : MonoBehaviour
     {
         if (clip != null)
         {
-            volume = Mathf.Clamp01(volume);
-            audioSource.volume = volume;
+            //volume = Mathf.Clamp01(volume);
+            audioSource.volume = volume/100;
             audioSource.PlayOneShot(clip);
         }
     }
