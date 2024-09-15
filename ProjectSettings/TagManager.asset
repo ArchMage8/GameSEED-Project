@@ -78,6 +78,9 @@ TagManager:
   - name: Foreground
     uniqueID: 2167238333
     locked: 0
+  - name: World GUI
+    uniqueID: 1310587947
+    locked: 0
   - name: LevelBorders
     uniqueID: 1508317085
     locked: 0
