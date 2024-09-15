@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationHandler : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public PlayerMovement playerMovement;
     public Animator animator;
     public GameObject CombatHandler;
     private EnemyCombatHandler combatHandler;
@@ -30,7 +31,7 @@ public class PlayerAnimationHandler : MonoBehaviour
             return; // Return immediately to prevent other logic (like walking) from running during the jump
         }
 
-        if (!isJumping && rb.velocity.x != 0)
+        if (!isJumping && rb.velocity.x != 0 && playerMovement.isGrounded)
         {
             // Walk
             if (!isFalling)
