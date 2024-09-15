@@ -7,12 +7,17 @@ public class SeedGiver : MonoBehaviour
     public bool canGrowLasso;
     public bool canGrowKnife;
 
+    [Header("Audio Growth Settings")]
+    public AudioClip TakeSeedSFXClip;
+    public float volume;
+
     private bool playerInRange;
 
     private void Update()
     {
         if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
+            SFXManager.instance.PlaySFX(TakeSeedSFXClip, volume);
             Interact();
         }
     }
