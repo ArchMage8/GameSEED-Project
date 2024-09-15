@@ -27,5 +27,9 @@ public class BossBar : MonoBehaviour
         Vector3 newScale = HPBar.localScale;
         newScale.x = healthPercentage;
         HPBar.localScale = newScale;
+
+        if(BossA.health <= 0){
+            Destroy(this.gameObject);
+        }
     }
 }
