@@ -77,7 +77,11 @@ public class EnemyCombatHandler : MonoBehaviour
             visual.SetActive(false);
             yield return new WaitForSeconds(flickerRate);
             visual.SetActive(true);
-          
+
+            if (isBoss)
+            {
+                boxCollider2D.enabled = true;
+            }
             timer += 1f;
         }
         visual.SetActive(true);
