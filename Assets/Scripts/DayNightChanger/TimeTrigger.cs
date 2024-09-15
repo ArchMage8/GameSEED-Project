@@ -17,12 +17,14 @@ public class TimeTrigger : MonoBehaviour
     private bool playerInRange;
     private bool inProgress = false;
     private HealthSystem playerHealth;
+    private PlayerMovement playerMovement;
 
     private void Update()
     {
         if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)) && !inProgress)
         {
             HealPlayer();
+            playerMovement.StopMovement();
 
             if (TimeCycle.Instance.TimeValue % 2 == 1)
             {
@@ -45,6 +47,7 @@ public class TimeTrigger : MonoBehaviour
         {
             playerInRange = true;
             playerHealth = collision.GetComponent<HealthSystem>();
+            playerMovement = collision.GetComponent<PlayerMovement>();
         }
     }
 
@@ -54,6 +57,7 @@ public class TimeTrigger : MonoBehaviour
         {
             playerInRange = false;
             playerHealth = null;
+            playerMovement = null;
         }
     }
 
