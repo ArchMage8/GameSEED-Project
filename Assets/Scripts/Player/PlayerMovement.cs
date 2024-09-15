@@ -115,8 +115,12 @@ public class PlayerMovement : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log("land");
-        SFXManager.instance.PlaySFX(LandClip);
+
+        if (isGrounded)
+        {
+           // Debug.Log(this.gameObject.name + "land");
+            SFXManager.instance.PlaySFX(LandClip);
+        }
     }
 
     private void FallHandler()
