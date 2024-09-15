@@ -3538,6 +3538,8 @@ MonoBehaviour:
   SpiralAttackSFXClip: {fileID: 8300000, guid: 10834ef058c2cc346abc6dd24c908087, type: 3}
   StarAttackSFXClip: {fileID: 8300000, guid: 31bb0858be9428b478ede24c0424b370, type: 3}
   TrackAttackSFXClip: {fileID: 8300000, guid: e407f84cffd1e064ab44e6d3b5dfa5cc, type: 3}
+  DualBeamAttackSFXClip: {fileID: 8300000, guid: e35c74327f2f5044fad0f79e64c5495c, type: 3}
+  SeedLaserAttackSFXClip: {fileID: 8300000, guid: 29bf48e2c4b68894caf64450615420fa, type: 3}
 --- !u!114 &4617841652580319991
 MonoBehaviour:
   m_ObjectHideFlags: 0

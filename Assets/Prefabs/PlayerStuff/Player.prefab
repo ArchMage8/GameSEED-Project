@@ -11400,7 +11400,7 @@ MonoBehaviour:
   invincibleDuration: 0.5
   flickerRate: 0.5
   DeathCanvas: {fileID: 0}
-  SFXClip: {fileID: 8300000, guid: 40b2e53e3c0a45b4cbf31718035aead9, type: 3}
+  SFXClip: {fileID: 8300000, guid: 9e860c3567cbbed4fa42e2538c50efc6, type: 3}
   volume: 100
 --- !u!114 &2206875577222695697
 MonoBehaviour:
