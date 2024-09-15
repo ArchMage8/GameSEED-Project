@@ -10,6 +10,7 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private Transform defaultCheckpoint;  // Set via Inspector
     [SerializeField] private GameObject RespawnCanvas;
     [SerializeField] private float RespawnCanvasDelay;
+    [SerializeField] private GameObject DeathCanvas;
     private Transform currentCheckpoint;
 
     private GameObject player;
@@ -40,6 +41,7 @@ public class Checkpoint : MonoBehaviour
 
     public void Respawn()
     {
+        DeathCanvas.SetActive(false);
         StartCoroutine(RespawnWithDelay());
     }
 

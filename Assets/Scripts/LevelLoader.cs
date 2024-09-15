@@ -25,4 +25,10 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionDelay);
         SceneManager.LoadScene(destinationScene);
     }
+
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
 }

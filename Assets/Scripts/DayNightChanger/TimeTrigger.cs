@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor.Rendering;
 
 public class TimeTrigger : MonoBehaviour
 {
@@ -15,15 +16,19 @@ public class TimeTrigger : MonoBehaviour
 
     private bool playerInRange;
     private bool inProgress = false;
+    private HealthSystem playerHealth;
 
     private void Update()
     {
         if (playerInRange && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)) && !inProgress)
         {
+            HealPlayer();
+
             if (TimeCycle.Instance.TimeValue % 2 == 1)
             {
                 inProgress = true;
                 StartCoroutine(ChangeTimeDay());
+
             }
 
             else
@@ -39,6 +44,7 @@ public class TimeTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
+            playerHealth = collision.GetComponent<HealthSystem>();
         }
     }
 
@@ -47,6 +53,7 @@ public class TimeTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
+            playerHealth = null;
         }
     }
 
@@ -96,5 +103,13 @@ public class TimeTrigger : MonoBehaviour
         SFXManager.instance.PlaySFX(SFXClipEnd, volume);
         yield return new WaitForSeconds(animationEndWait);
         Nightcanvas.SetActive(false);
+    }
+
+    private void HealPlayer()
+    {
+        if (playerInRange)
+        {
+            playerHealth.GainHealth(4);
+        }
     }
 }
