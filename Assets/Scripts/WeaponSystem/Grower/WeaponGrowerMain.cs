@@ -68,6 +68,10 @@ public class WeaponGrowerMain : MonoBehaviour
         weaponChild.SetActive(true);
         SFXManager.instance.PlaySFX(SFXClip, volume);
         canPlant = false;
+
+        sickleImage.SetActive(false);
+        lassoImage.SetActive(false);
+        knifeImage.SetActive(false);
         //ResetGrower();
     }
 
