@@ -21,7 +21,8 @@ public class Swing_Player : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip SFXClip;
- 
+    public float volume;
+
 
     private Transform detectorTransform;
 
@@ -60,7 +61,7 @@ public class Swing_Player : MonoBehaviour
 
     private void StartSwing()
     {
-        SFXManager.instance.PlaySFX(SFXClip);
+        SFXManager.instance.PlaySFX(SFXClip, volume);
 
         distanceJoint.enabled = true;
         playerMovement.enabled = false;

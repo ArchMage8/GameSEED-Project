@@ -22,7 +22,8 @@ public class HealthSystem : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip SFXClip;
-  
+    public float volume;
+
 
     private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
@@ -70,7 +71,7 @@ public class HealthSystem : MonoBehaviour
         if (!Invincible)
         {
             Health -= damage;
-            SFXManager.instance.PlaySFX(SFXClip);
+            SFXManager.instance.PlaySFX(SFXClip, volume);
             StartCoroutine(InvincibleState());
             if (Health <= 0)
             {

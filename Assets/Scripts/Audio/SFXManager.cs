@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.VFX;
 
 public class SFXManager : MonoBehaviour
@@ -22,10 +23,11 @@ public class SFXManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(AudioClip clip)
+    public void PlaySFX(AudioClip clip, float volume)
     {
         if (clip != null)
         {
+            volume = Mathf.Clamp01(volume);
             audioSource.PlayOneShot(clip);
         }
     }

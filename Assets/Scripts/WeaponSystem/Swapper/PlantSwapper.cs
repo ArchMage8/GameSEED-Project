@@ -12,7 +12,8 @@ public class PlantSwapper : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip SFXClip;
-   
+    public float volume;
+
 
     private bool playerInRange;
     private WeaponGrowerMain growerMain;
@@ -70,7 +71,7 @@ public class PlantSwapper : MonoBehaviour
             if (playerSwapper != null)
             {
                 playerSwapper.WeaponSwap(targetSickle, targetLasso, targetKnife);
-                SFXManager.instance.PlaySFX(SFXClip);
+                SFXManager.instance.PlaySFX(SFXClip, volume);
                 WeaponGrowerMain mainGrower = transform.parent.GetComponent<WeaponGrowerMain>();
                 if (mainGrower != null)
                 {

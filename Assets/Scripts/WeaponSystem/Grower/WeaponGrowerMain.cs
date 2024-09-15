@@ -14,6 +14,7 @@ public class WeaponGrowerMain : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip SFXClip;
+    public float volume;
 
     private SpriteRenderer spriteRenderer;
 
@@ -65,7 +66,7 @@ public class WeaponGrowerMain : MonoBehaviour
     private void PlantWeapon(GameObject weaponChild)
     {
         weaponChild.SetActive(true);
-        SFXManager.instance.PlaySFX(SFXClip);
+        SFXManager.instance.PlaySFX(SFXClip, volume);
         canPlant = false;
         //ResetGrower();
     }

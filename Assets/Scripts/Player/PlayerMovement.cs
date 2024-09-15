@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip LandClip;
+    public float volume;
 
     [Header("Footstep Settings")]
     public AudioClip footstepClip;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private bool canPlaySound = true;
+    
 
     private bool isFalling;
 
@@ -119,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
            // Debug.Log(this.gameObject.name + "land");
-            SFXManager.instance.PlaySFX(LandClip);
+            SFXManager.instance.PlaySFX(LandClip,volume);
         }
     }
 

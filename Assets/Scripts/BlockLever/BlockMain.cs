@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering;
 
 public class BlockMain : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class BlockMain : MonoBehaviour
 
     [Header("Audio Files")]
     public AudioClip SFXClip;
-    
+    public float volume;
 
 
     [Header("State Variables")]
@@ -70,7 +71,7 @@ public class BlockMain : MonoBehaviour
         }
         else
         {
-            SFXManager.instance.PlaySFX(SFXClip);
+            SFXManager.instance.PlaySFX(SFXClip, volume);
             StartCoroutine(Move());
         }
     }

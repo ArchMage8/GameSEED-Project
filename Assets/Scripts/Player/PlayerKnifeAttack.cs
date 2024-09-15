@@ -21,6 +21,8 @@ public class PlayerKnifeAttack : MonoBehaviour
     public AudioClip SFXClip2;
     public AudioClip SFXClip3;
 
+    public float volume;
+
     private bool canAttack = true;
     public bool isAttacking { get; private set; }
 
@@ -113,15 +115,15 @@ public class PlayerKnifeAttack : MonoBehaviour
 
         if (randomNumber == 1)
         {
-            SFXManager.instance.PlaySFX(SFXClip1);
+            SFXManager.instance.PlaySFX(SFXClip1, volume);
         }
         else if (randomNumber == 2)
         {
-            SFXManager.instance.PlaySFX(SFXClip2);
+            SFXManager.instance.PlaySFX(SFXClip2, volume);
         }
         else if (randomNumber == 3)
         {
-            SFXManager.instance.PlaySFX(SFXClip3);
+            SFXManager.instance.PlaySFX(SFXClip3, volume);
         }
     }
 }
