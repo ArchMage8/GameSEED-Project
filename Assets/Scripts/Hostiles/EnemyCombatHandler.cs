@@ -53,7 +53,9 @@ public class EnemyCombatHandler : MonoBehaviour
 
     private IEnumerator StunState()
     {
-        
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
+
+        boxCollider2D.enabled = false;
 
         float timer = 0f;
         while (timer < stunDuration)
@@ -63,13 +65,14 @@ public class EnemyCombatHandler : MonoBehaviour
             //visual.enabled = true;
             timer += 1f;
         }
-        Debug.Log("Stun");
+        boxCollider2D.enabled = true; 
+        //Debug.Log("Stun");
     }
 
     private IEnumerator EnemyDeath()
     {
-        Debug.Log("Death");
-
+        //Debug.Log("Death");
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         float timer = 0f;
         while (timer < stunDuration)
         {
