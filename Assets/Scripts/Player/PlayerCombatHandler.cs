@@ -45,6 +45,7 @@ public class PlayerCombatHandler : MonoBehaviour
 
         if (canAttack && (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.J)))
         {
+            playerMovement.StopMovement();
             StartCoroutine(Attack());
         }
     }
@@ -55,7 +56,7 @@ public class PlayerCombatHandler : MonoBehaviour
         isAttacking = true;
 
         playerMovement.canMove = false;
-        playerMovement.StopMovement();
+        
         animator.SetTrigger("Attack");
 
         if (!playerMovement.isGrounded)
