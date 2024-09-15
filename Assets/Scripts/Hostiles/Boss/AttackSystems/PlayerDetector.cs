@@ -11,6 +11,11 @@ public class PlayerDetector : MonoBehaviour
     public GameObject OriginalBGM;
     public GameObject BossBGM;
 
+    private void Start()
+    {
+        BossBGM.SetActive(false);
+    }
+
     private void Update()
     {
         if (playerInRange == false)
