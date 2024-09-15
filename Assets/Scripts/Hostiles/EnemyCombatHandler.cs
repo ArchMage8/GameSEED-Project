@@ -8,6 +8,7 @@ public class EnemyCombatHandler : MonoBehaviour
     public bool CanMove;
     public float stunDuration;
     public float health;
+    public bool isBlock;
 
     [Header("Boss Settings")]
     public bool isBoss;
@@ -38,9 +39,22 @@ public class EnemyCombatHandler : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        //Debug.Log("takeDamage");
-        health -= damage;
-        AudioRandomizer();
+        if (!isBlock)
+        {
+            //Debug.Log("takeDamage");
+            health -= damage;
+            AudioRandomizer();
+        }
+
+        else if (isBlock)
+        {
+            if (PlayerStateManager.Instance.isSickleActive)
+            {
+                health -= damage;
+                AudioRandomizer();
+            }
+        }
+
         if (health <= 0)
         {
             StartCoroutine(EnemyDeath());
