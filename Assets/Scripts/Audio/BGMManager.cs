@@ -15,19 +15,25 @@ public class BGMManager : MonoBehaviour
     }
     private void Update()
     {
-        if (TimeCycle.Instance.TimeValue % 2 == 1)
+        if (TimeCycle.Instance.TimeValue % 2 == 1) //Day
         {
-            SetBGMVolume(PlayVolume, 0);
+            SetDayVolume();
         }
-        else
+        else if (TimeCycle.Instance.TimeValue % 2 == 0)//Night
         {
-            SetBGMVolume(0, PlayVolume);
+            SetNightVolume();
         }
     }
 
-    private void SetBGMVolume(int dayVolume, int nightVolume)
+    private void SetDayVolume()
     {
-        DayBGM.volume = dayVolume;
-        NightBGM.volume = nightVolume;
+       DayBGM.volume = PlayVolume;
+       NightBGM.volume = 0;
+    }
+    
+    private void SetNightVolume()
+    {
+        DayBGM.volume = 0;
+        NightBGM.volume = PlayVolume;
     }
 }
