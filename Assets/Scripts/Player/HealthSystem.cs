@@ -127,7 +127,7 @@ public class HealthSystem : MonoBehaviour
         {
             spriteRenderer.enabled = !spriteRenderer.enabled;
             yield return new WaitForSeconds(flickerRate);
-            timer += 1f;
+            timer += 0.1f;
         }
 
         Invincible = false;
