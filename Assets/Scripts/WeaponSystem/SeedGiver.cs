@@ -52,5 +52,7 @@ public class SeedGiver : MonoBehaviour
         {
             WeaponManager.Instance.CanGrowKnife = true;
         }
+
+        Destroy(this.gameObject);
     }
 }

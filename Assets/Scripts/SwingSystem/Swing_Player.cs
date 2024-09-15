@@ -6,6 +6,7 @@ public class Swing_Player : MonoBehaviour
 {
     [Header("Player Settings")]
     public bool inRange = false;
+    public GameObject LassoPlayer;
 
     private bool isSwinging = false;
     private DistanceJoint2D distanceJoint;
@@ -25,6 +26,7 @@ public class Swing_Player : MonoBehaviour
 
 
     private Transform detectorTransform;
+    private bool CanLasso = false;
 
     private void Start()
     {
@@ -41,7 +43,9 @@ public class Swing_Player : MonoBehaviour
     {
         if (inRange && !playerMovement.isGrounded && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
-            if (!isSwinging)
+            CanISwing();
+
+            if (!isSwinging && CanLasso)
             {
                 StartSwing();
             }
@@ -118,5 +122,18 @@ public class Swing_Player : MonoBehaviour
         // After the animation, make sure the line reaches the full distance
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, detectorTransform.position);
+    }
+
+    private void CanISwing()
+    {
+        if(LassoPlayer.activeInHierarchy == true)
+        {
+            CanLasso = true;
+        }
+
+        else
+        {
+            CanLasso = false;
+        }
     }
 }
