@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private int destinationScene;
-    [SerializeField] private int transitionDelay;
+    [SerializeField] private float transitionDelay;
     [SerializeField]private Animator animator;
 
     private void Start()
