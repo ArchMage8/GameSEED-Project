@@ -498,6 +498,7 @@ MonoBehaviour:
   targetKnife: 1
   MainObject: {fileID: 7418147432233929109}
   SFXClip: {fileID: 8300000, guid: d36b1427bccf3eb409705f7704cb3b66, type: 3}
+  volume: 100
 --- !u!212 &7418147430724898865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1067,6 +1068,7 @@ MonoBehaviour:
   targetKnife: 0
   MainObject: {fileID: 7418147432233929109}
   SFXClip: {fileID: 8300000, guid: d36b1427bccf3eb409705f7704cb3b66, type: 3}
+  volume: 100
 --- !u!212 &7418147431908068512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1279,6 +1281,7 @@ MonoBehaviour:
   lassoChild: {fileID: 7418147431911802844}
   knifeChild: {fileID: 7418147431097847338}
   SFXClip: {fileID: 8300000, guid: 6df362d57619f84439eda6828684e9fb, type: 3}
+  volume: 100
 --- !u!61 &7418147432233929115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1408,6 +1411,7 @@ MonoBehaviour:
   targetKnife: 0
   MainObject: {fileID: 7418147432233929109}
   SFXClip: {fileID: 8300000, guid: d36b1427bccf3eb409705f7704cb3b66, type: 3}
+  volume: 100
 --- !u!212 &7418147432306553389
 SpriteRenderer:
   m_ObjectHideFlags: 0

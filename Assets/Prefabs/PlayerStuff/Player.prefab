@@ -10703,6 +10703,7 @@ MonoBehaviour:
   SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
   SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
   SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
+  volume: 70
 --- !u!1 &8588073271820524155
 GameObject:
   m_ObjectHideFlags: 0
@@ -11005,7 +11006,11 @@ MonoBehaviour:
   isGrounded: 0
   canMove: 1
   isMoving: 0
-  SFXClip: {fileID: 8300000, guid: c7c6138984054fc4585db7c4e9e382f6, type: 3}
+  LandClip: {fileID: 8300000, guid: c7c6138984054fc4585db7c4e9e382f6, type: 3}
+  volume: 1.5
+  footstepClip: {fileID: 0}
+  audioSource: {fileID: 0}
+  isWalking: 0
 --- !u!114 &1968374218202108232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11152,6 +11157,7 @@ MonoBehaviour:
   swingForce: 5
   lineAppearDuration: 0
   SFXClip: {fileID: 8300000, guid: 8cc30fbfccda6ac4f8a785b3934bea74, type: 3}
+  volume: 70
 --- !u!114 &494056141201814028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11193,6 +11199,7 @@ MonoBehaviour:
   flickerRate: 0.5
   DeathCanvas: {fileID: 0}
   SFXClip: {fileID: 8300000, guid: 40b2e53e3c0a45b4cbf31718035aead9, type: 3}
+  volume: 100
 --- !u!114 &2206875577222695697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11813,6 +11820,7 @@ MonoBehaviour:
   SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
   SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
   SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
+  volume: 70
 --- !u!1 &8588073273105991697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11958,6 +11966,7 @@ MonoBehaviour:
   SFXClip1: {fileID: 8300000, guid: a1470562e9bf11f4a8e390183a3c714d, type: 3}
   SFXClip2: {fileID: 8300000, guid: 25f05abb2b1978c429fb02808d67b89e, type: 3}
   SFXClip3: {fileID: 8300000, guid: ea02aaf8763418f4a873ea7a4555889e, type: 3}
+  volume: 70
 --- !u!1 &8840466109536954623
 GameObject:
   m_ObjectHideFlags: 0
