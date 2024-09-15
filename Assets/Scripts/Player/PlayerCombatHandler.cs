@@ -26,7 +26,6 @@ public class PlayerCombatHandler : MonoBehaviour
     private Rigidbody2D rb;
 
     private float initialGravity;
-    
 
     private void Start()
     {
@@ -38,13 +37,16 @@ public class PlayerCombatHandler : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(transform.position, Vector2.right * transform.localScale.x * rayLength, Color.red);
+        // Use Mathf.Sign to ensure the ray goes in the correct direction based on the player's facing direction
+        Vector2 rayDirection = Vector2.right * Mathf.Sign(MainObject.transform.localScale.x);
+
+        // Draw the ray for visualization
+        Debug.DrawRay(transform.position, rayDirection * rayLength, Color.red);
 
         if (canAttack && (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.J)))
         {
             StartCoroutine(Attack());
         }
-        //Debug.Log(isAttacking);
     }
 
     private IEnumerator Attack()
@@ -52,7 +54,6 @@ public class PlayerCombatHandler : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
-        //Debug.Log(isAttacking + "a");
         playerMovement.canMove = false;
         playerMovement.StopMovement();
         animator.SetTrigger("Attack");
@@ -62,10 +63,10 @@ public class PlayerCombatHandler : MonoBehaviour
             rb.gravityScale = TempGravity;
         }
 
-       
+        // Raycast based on the player's facing direction
+        Vector2 rayDirection = Vector2.right * Mathf.Sign(MainObject.transform.localScale.x);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, rayDirection, rayLength);
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right * transform.localScale.x, rayLength);
-        
         AudioRandomizer();
 
         foreach (var hit in hits)
@@ -81,29 +82,25 @@ public class PlayerCombatHandler : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
-        if (playerMovement.isGrounded)
-        
-        {
 
+        if (playerMovement.isGrounded)
+        {
             isAttacking = false;
             canAttack = true;
             playerMovement.canMove = true;
         }
-
         else
         {
             rb.gravityScale = initialGravity;
             StartCoroutine(MidAirHandler());
         }
-        
-        
     }
 
     private IEnumerator MidAirHandler()
     {
         while (!playerMovement.isGrounded)
         {
-            yield return null; 
+            yield return null;
         }
         canAttack = true;
         playerMovement.canMove = true;

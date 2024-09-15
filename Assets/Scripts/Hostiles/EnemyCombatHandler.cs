@@ -19,7 +19,7 @@ public class EnemyCombatHandler : MonoBehaviour
 
     [Header("Flicker Settings")]
     public float flickerRate = 0.1f; // Flicker speed during stun
-    public SpriteRenderer visual;
+    public GameObject visual;
 
     [Header("Audio Files")]
     public AudioClip SFXClip1;
@@ -60,11 +60,13 @@ public class EnemyCombatHandler : MonoBehaviour
         float timer = 0f;
         while (timer < stunDuration)
         {
-            visual.enabled = !visual.enabled;
+            visual.SetActive(false);
             yield return new WaitForSeconds(flickerRate);
-            //visual.enabled = true;
+            visual.SetActive(true);
+          
             timer += 1f;
         }
+        visual.SetActive(true);
         boxCollider2D.enabled = true; 
         //Debug.Log("Stun");
     }
@@ -74,11 +76,12 @@ public class EnemyCombatHandler : MonoBehaviour
         //Debug.Log("Death");
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         float timer = 0f;
-        visual.color = Color.red;
+      
         while (timer < stunDuration)
         {
-            visual.enabled = !visual.enabled;
+            visual.SetActive(false);
             yield return new WaitForSeconds(flickerRate);
+            visual.SetActive(true); 
             timer += 1f;
         }
        
@@ -88,7 +91,7 @@ public class EnemyCombatHandler : MonoBehaviour
             sceneTrigger.SetActive(true);
         }
 
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 
    
