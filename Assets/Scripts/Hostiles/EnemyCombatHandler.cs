@@ -59,7 +59,7 @@ public class EnemyCombatHandler : MonoBehaviour
         {
             StartCoroutine(EnemyDeath());
         }
-        else if( health > 0 && !isBoss)
+        else
         {
             StartCoroutine(StunState());
         }
