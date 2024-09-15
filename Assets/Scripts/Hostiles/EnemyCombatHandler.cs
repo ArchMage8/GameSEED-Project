@@ -69,7 +69,10 @@ public class EnemyCombatHandler : MonoBehaviour
     {
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
 
-        boxCollider2D.enabled = false;
+        if (!isBoss)
+        {
+            boxCollider2D.enabled = false;
+        }
 
         float timer = 0f;
         while (timer < stunDuration)
