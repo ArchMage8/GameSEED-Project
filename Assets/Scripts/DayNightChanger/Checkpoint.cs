@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
@@ -6,6 +8,8 @@ public class Checkpoint : MonoBehaviour
     public static Checkpoint instance;
 
     [SerializeField] private Transform defaultCheckpoint;  // Set via Inspector
+    [SerializeField] private GameObject RespawnCanvas;
+    [SerializeField] private float RespawnCanvasDelay;
     private Transform currentCheckpoint;
 
     private GameObject player;
@@ -26,6 +30,7 @@ public class Checkpoint : MonoBehaviour
     {
         currentCheckpoint = defaultCheckpoint;  // Initialize current checkpoint to default
         player = GameObject.FindWithTag("Player");  // Assuming player is tagged as "Player"
+        RespawnCanvas.SetActive(false);
     }
 
     public void UpdateCheckpoint(Transform newCheckpoint)
@@ -34,6 +39,11 @@ public class Checkpoint : MonoBehaviour
     }
 
     public void Respawn()
+    {
+        StartCoroutine(RespawnWithDelay());
+    }
+
+    private void RespawnLogic()
     {
         if (player != null)
         {
@@ -51,5 +61,14 @@ public class Checkpoint : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Debug.LogWarning("The level loader fade isnt made yet :p");
+    }
+
+    private IEnumerator RespawnWithDelay()
+    {
+        RespawnCanvas.SetActive(true);
+        RespawnLogic();
+        yield return new WaitForSeconds(RespawnCanvasDelay);
+        RespawnCanvas.SetActive(false);
+
     }
 }
