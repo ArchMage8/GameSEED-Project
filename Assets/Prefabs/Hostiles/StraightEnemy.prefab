@@ -567,7 +567,7 @@ MonoBehaviour:
   direction: 0
   animator: {fileID: 453012279218941775}
   Player: {fileID: 0}
-  minRange: 20
+  minRange: 5
   SFXClip: {fileID: 8300000, guid: 5856ab7f5aec5d146affdc457b27aaea, type: 3}
 --- !u!114 &2407874142591582611
 MonoBehaviour:

@@ -68,6 +68,7 @@ public class ArcShooter : MonoBehaviour
     private void CheckDistance()
     {
         float distance = Vector2.Distance(transform.position, Player.position);
+        //Debug.Log(distance);
 
         if (distance <= minRange)
         {

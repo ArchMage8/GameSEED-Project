@@ -40,7 +40,7 @@ public class NormalShooter : MonoBehaviour
         
         timeSinceLastShot += Time.deltaTime;
 
-        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack)
+        if (timeSinceLastShot >= delayBetweenShots && enemyCombatHandler.CanAttack && playerInRange)
         {
             animator.SetTrigger("Shoot");
             ShootProjectile();

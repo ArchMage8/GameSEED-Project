@@ -726,7 +726,7 @@ MonoBehaviour:
   delayBetweenShots: 3
   animator: {fileID: 9162281629022900741}
   Player: {fileID: 0}
-  minRange: 20
+  minRange: 5
   SFXClip: {fileID: 8300000, guid: 5856ab7f5aec5d146affdc457b27aaea, type: 3}
 --- !u!114 &9162281629022900736
 MonoBehaviour:
